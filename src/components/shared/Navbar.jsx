@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function Navbar() {
-  const [sidebarIsVisible, setSidebarIsVisible] = useState(true);
+  const [sidebarIsVisible, setSidebarIsVisible] = useState(false);
 
   return (
     <>
