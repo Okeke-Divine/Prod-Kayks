@@ -15,7 +15,9 @@ export default function Beats() {
           <div className="flex justify-between items-center">
             <div className="font-bold text-2xl">Drills</div>
             <div>
-              <Link className="text-wood" href={"/beats/?genre=drill"}></Link>
+              <Link className="text-wood" href={"/beats/?genre=drill"}>
+                See All
+              </Link>
             </div>
           </div>
         </div>
