@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import Divider from "@/components/shared/Divider";
-import CTag from "@/components/shared/CTag";
+import Divider from "../shared/Divider";
+import CTag from "../shared/CTag";
 
 export default function Hero() {
   return (

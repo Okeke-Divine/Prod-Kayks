@@ -1,4 +1,4 @@
-import Divider from "@/components/shared/Divider";
+import Divider from "./Divider";
 import Link from "next/link";
 
 export default function Navbar() {

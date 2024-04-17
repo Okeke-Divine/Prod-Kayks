@@ -1,5 +1,5 @@
-import CTag from "@/components/shared/CTag";
-import Divider from "@/components/shared/Divider";
+import CTag from "../shared/CTag";
+import Divider from "../shared/Divider";
 
 export default function Beats() {
   return (

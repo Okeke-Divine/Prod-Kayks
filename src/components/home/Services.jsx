@@ -1,5 +1,5 @@
-import CTag from "@/components/shared/CTag";
-import ServiceItem from "@/components/Home/ServiceItem";
+import CTag from "../shared/CTag";
+import ServiceItem from "./ServiceItem";
 
 export default function Services() {
   return (

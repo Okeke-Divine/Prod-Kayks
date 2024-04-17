@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Divider from "@/components/shared/Divider";
+import Divider from "./Divider";
 
 export default function Footer() {
   const socials = [
