@@ -32,9 +32,8 @@ export default function MySongs() {
       <div className="mainLayout" id="mySongs">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {songs.map((song, index) => (
-            <Link href={song.url}>
+            <Link href={song.url} key={index}>
               <div
-                key={index}
                 className="flex items-center gap-x-3 duration-300 hover:opacity-80 p-2 border-2 border-transparent cursor-pointer hover:border-pink-500 rounded-lg"
               >
                 <div>
