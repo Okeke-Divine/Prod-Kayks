@@ -3,6 +3,8 @@ import Link from "next/link";
 import Divider from "../shared/Divider";
 import CTag from "../shared/CTag";
 
+import {SPOTIFY_URL} from "../../constants/shared/socials"
+
 export default function Hero() {
   return (
     <>
@@ -40,9 +42,9 @@ export default function Hero() {
                 industry-ready instrumentals to fuel your next track.
               </div>
               <div className="flex flex-wrap gap-5 items-center mt-10">
-                <Link href="/#services" target={"_blank"}>
+                <Link href={SPOTIFY_URL} target={"_blank"}>
                   <button className="border-2 border-gray-600 py-3 px-4 rounded-lg">
-                    Services
+                    Spotify
                   </button>
                 </Link>
               </div>
