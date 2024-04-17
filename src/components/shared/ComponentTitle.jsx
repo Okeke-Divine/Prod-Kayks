@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function ComponentTitle({name, url}) {
   return (
     <>

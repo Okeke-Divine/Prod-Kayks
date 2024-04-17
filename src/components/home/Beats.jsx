@@ -1,6 +1,7 @@
 import Link from "next/link";
 import CTag from "../shared/CTag";
 import Divider from "../shared/Divider";
+import ComponentTitle from "../shared/ComponentTitle";
 
 export default function Beats() {
   return (
@@ -20,6 +21,7 @@ export default function Beats() {
               </Link>
             </div>
           </div>
+          <ComponentTitle name="Drill" url="/beats/?genre=drill" />
         </div>
       </div>
       <br />
