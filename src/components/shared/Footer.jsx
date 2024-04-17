@@ -8,9 +8,9 @@ export default function Footer() {
   const socials = [
     { name: "Tiktok", url: TIKTOK_URL },
     { name: "Instagram", url: INSTAGRAM_URL },
-    { name: "Youtube", YOUTUBE_URL },
-    { name: "Twitter", TWITTER_URL },
-    { name: "Facebook", FACEBOOK_URL },
+    { name: "Youtube", url: YOUTUBE_URL},
+    { name: "Twitter", url: TWITTER_URL },
+    { name: "Facebook", url: FACEBOOK_URL },
     // { name: "Push.fm", url: "" },
     // { name: "Spotify", url: "" },
   ];
