@@ -97,6 +97,68 @@ export default function Beats() {
       imgUrl: "",
     },
   ];
+  const drill_beats = [
+    {
+      title: "Dark Turn",
+      description: "Menacing drill beat with hard-hitting 808s",
+      genre: "Drill",
+      imgUrl: "",
+    },
+    {
+      title: "Astral Drill",
+      description: "Drill beat infused with celestial vibes",
+      genre: "Drill",
+      imgUrl: "",
+    },
+    {
+      title: "Neon Blaze",
+      description: "Electrifying New York drill beat",
+      genre: "Drill",
+      imgUrl: "",
+    },
+    {
+      title: "Lunar Drill",
+      description: "Drill beat with lunar melodies",
+      genre: "Drill",
+      imgUrl: "",
+    },
+    {
+      title: "Savage Symphony",
+      description: "High-energy drill beat for the streets",
+      genre: "Drill",
+      imgUrl: "",
+    },
+    {
+      title: "Crimson Echo",
+      description: "Echoing and intense drill beat",
+      genre: "Drill",
+      imgUrl: "",
+    },
+    {
+      title: "Vortex Vibe",
+      description: "Chilled-out drill beat with vortex vibes",
+      genre: "Drill",
+      imgUrl: "",
+    },
+    {
+      title: "Shadow Strike",
+      description: "Shadowy and raw drill beat",
+      genre: "Drill",
+      imgUrl: "",
+    },
+    {
+      title: "Apex Aura",
+      description: "Hard-hitting drill beat with an apex aura",
+      genre: "Drill",
+      imgUrl: "",
+    },
+    {
+      title: "Eclipse Elegance",
+      description: "Elegant and flex-worthy drill beat",
+      genre: "Drill",
+      imgUrl: "",
+    },
+  ];
   
 
   return (
@@ -143,7 +205,7 @@ export default function Beats() {
         <div className="mb-5">
           <ComponentTitle name="Drills" url="/beats/?genre=drill" />
           <div className="beatFlex">
-            {afro_beats.map((beat, index) => (
+            {drill_beats.map((beat, index) => (
               <div key={index}>
                 <BeatCard
                   title={beat.title}

@@ -1,9 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import Divider from "../shared/Divider";
-import CTag from "../shared/CTag";
 
-import {SPOTIFY_URL} from "../../constants/shared/socials"
+import { SPOTIFY_URL } from "../../constants/shared/socials";
 
 export default function Hero() {
   return (
@@ -22,42 +21,22 @@ export default function Hero() {
         {/* Content */}
         <div className="mainLayout py-10 md:py-40 relative z-10">
           <div className="block md:flex items-center justify-center gap-x-5">
-            <div className="w-full md:w-1/2">
-              <CTag name="Producer" />
-              <div className="mt-3 text-4xl">
-                Prod. <span className="font-bold">Kayks</span>
+            <div className="w-full md:w-full flex justify-center">
+              <div className="w-fit">
+                <div className="mt-3 text-4xl font-bold">
+                  My Spotify Catalog
+                </div>
+                <div className="text-gray-400 text-center mt-2">
+                    List of songs/beats released on spotify.
+                </div>
+                <div className="flex justify-center mt-3">
+                  <Link href={SPOTIFY_URL} target={"_blank"}>
+                    <button className="border-2 border-gray-600 py-3 px-4 rounded-lg">
+                      Spotify
+                    </button>
+                  </Link>
+                </div>
               </div>
-              <div className="mt-5 text-gray-400">
-                Over 3 years of crafting fire beats for renowned artists like
-                Schway, Joven Lastkid, Ecoh MDK, Biggie Fx, VoltageIsNotAKid etc as
-                well as top labels like{" "}
-                <Link
-                  className="text-wood"
-                  href="https://www.instagram.com/bluenax1"
-                  target={"_blank"}
-                >
-                  Bluenax Productions
-                </Link>{" "}
-                (Tega Boi DC, Edo Zamani, Kenzo Ik, Endeetone, Datboi Smee). Get
-                industry-ready instrumentals to fuel your next track.
-              </div>
-              <div className="flex flex-wrap gap-5 items-center mt-10">
-                <Link href={SPOTIFY_URL} target={"_blank"}>
-                  <button className="border-2 border-gray-600 py-3 px-4 rounded-lg">
-                    Spotify
-                  </button>
-                </Link>
-              </div>
-            </div>
-            <div className="w-full md:w-fit flex">
-              <Image
-                alt="Music producer illustration"
-                className="hidden md:block w-[500px]"
-                src="/assets/images/10315339.png"
-                draggable={false}
-                width="612"
-                height="408"
-              />
             </div>
           </div>
         </div>
