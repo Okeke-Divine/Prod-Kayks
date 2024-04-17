@@ -1,9 +1,12 @@
 import Link from "next/link";
 import Divider from "./Divider";
 
+// constants
+import {TWITTER_URL, TIKTOK_URL, INSTAGRAM_URL, YOUTUBE_URL, FACEBOOK_URL} from "../../constants/shared/socials"
+
 export default function Footer() {
   const socials = [
-    { name: "Tiktok", url: "https://tiktok.com/@prod.kayks" },
+    { name: "Tiktok", url: TIKTOK_URL },
     { name: "Instagram", url: "https://www.instagram.com/prod.kayks/" },
     { name: "Youtube", url: "https://www.youtube.com/@prodkayks_beats" },
     { name: "Twitter", url: "https://twitter.com/prod_kayks" },
