@@ -110,7 +110,7 @@ export default function Beats() {
         {/* afro */}
         <div className="mb-5">
           <ComponentTitle name="Afro Beats" url="/beats/?genre=afro-beats" />
-          <div className="flex flex-nowrap whitespace-nowrap overflow-x-auto gap-3 pb-2">
+          <div className="beatFlex">
             {afro_beats.map((beat, index) => (
               <div key={index}>
                 <BeatCard

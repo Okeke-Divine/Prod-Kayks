@@ -83,6 +83,9 @@
   .footerIcon{
     @apply text-wood text-lg;
   }
+  .beatFlex{
+    @apply flex flex-nowrap whitespace-nowrap overflow-x-auto gap-3 pb-2;
+  }
 }
 
 /* begin scroll bar style */
