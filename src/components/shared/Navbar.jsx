@@ -46,7 +46,7 @@ export default function Navbar() {
           </Link>
           <button
             onClick={() => setSidebarIsVisible(true)}
-            className="block md:hidden p-2 rounded-lg border-2 duration-300 border-transparent hover:border-red-300"
+            className="block md:hidden p-2 border-r-2 duration-300 border-transparent hover:border-pink-500"
           >
             <i className="relative top-[2px] fi fi-ts-bars-staggered"></i>
           </button>
