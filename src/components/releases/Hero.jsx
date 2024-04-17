@@ -27,12 +27,17 @@ export default function Hero() {
                   My Spotify Catalog
                 </div>
                 <div className="text-gray-400 text-center mt-2">
-                    List of songs/beats released on spotify.
+                  List of songs/beats released on spotify.
                 </div>
-                <div className="flex justify-center mt-3">
+                <div className="flex flex-wrap gap-5 items-center justify-center mt-3">
                   <Link href={SPOTIFY_URL} target={"_blank"}>
                     <button className="border-2 border-gray-600 py-3 px-4 rounded-lg">
                       Spotify
+                    </button>
+                  </Link>
+                  <Link href={"/releases#mySongs"}>
+                    <button className="border-2 border-pink py-3 px-4 rounded-lg bg-pink">
+                      Songs
                     </button>
                   </Link>
                 </div>
