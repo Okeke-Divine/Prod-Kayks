@@ -84,3 +84,20 @@
     @apply text-wood text-lg;
   }
 }
+
+/* begin scroll bar style */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--col-pink);
+  border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--col-pink);
+}
+/* end scroll bar style */
