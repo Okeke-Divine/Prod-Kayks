@@ -23,9 +23,14 @@ export default function Hero() {
           <div className="block md:flex items-center justify-center gap-x-5">
             <div className="w-full md:w-full flex justify-center">
               <div className="w-fit">
-                <div className="mt-3 text-4xl font-bold">Prod. Kayks</div>
+                <div className="mt-3 text-4xl font-bold text-center">
+                  Prod. Kayks
+                </div>
                 <div className="text-gray-400 text-center mt-2">
-                  Music Producer{" "}
+                  Music Producer
+                </div>
+                <div className="text-wood text-center mt-2">
+                  Get industry-ready instrumentals to fuel your next track.
                 </div>
               </div>
             </div>
