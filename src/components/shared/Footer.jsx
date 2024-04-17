@@ -31,7 +31,7 @@ export default function Footer() {
               <div className="w-7 h-7 bg-pink rounded-full"></div>
               <div className="text-xl font-bold">Prod. Kayks</div>
             </div>
-            {/* <div className="mt-4 flex gap-x-5">
+            <div className="mt-4 flex gap-x-5">
               <div>
                 <Link href={socials[0].url} target="_blank">
                   <i className="footerIcon fi fi-brands-tik-tok"></i>
@@ -52,7 +52,10 @@ export default function Footer() {
                   <i className="footerIcon fi fi-brands-facebook"></i>
                 </Link>
               </div>
-            </div> */}
+            </div>
+            <div className="text-gray-400 mt-2">
+              Get industry-ready instrumentals to fuel your next track.
+            </div>
           </div>
           {/* socials */}
           <div className="">
