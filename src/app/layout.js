@@ -27,18 +27,20 @@ export default function RootLayout({ children }) {
         <meta property="og:title" content="Prod. Kayks | Music Producer | Get industry-ready instrumentals to fuel your next track." />
         <meta property="og:description" content="Get industry-ready instrumentals to fuel your next track." />
         <meta property="og:url" content="https://prodkayks.vercel.app/" />
-        {/* twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Prod. Kayks | Music Producer | Get industry-ready instrumentals to fuel your next track." />
-        <meta name="twitter:description" content="Get industry-ready instrumentals to fuel your next track." />
-        <meta name="twitter:url" content="https://prodkayks.vercel.app/" />
-        <meta name="twitter:creator" content="@okekedivine__" />
-      </head>
-      <body className={inter.className + ' ' + 'bg-purple-dark text-white'}>
-        <Navbar />
-        {children}
-        <Footer />
-      </body>
-    </html>
-  );
+        <meta property="og:image" content="/assets/images/og_image-1200x630.jpg" />
+          {/* twitter */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Prod. Kayks | Music Producer | Get industry-ready instrumentals to fuel your next track." />
+          <meta name="twitter:description" content="Get industry-ready instrumentals to fuel your next track." />
+          <meta name="twitter:url" content="https://prodkayks.vercel.app/" />
+          <meta name="twitter:creator" content="@okekedivine__" />
+          <meta name="twitter:image" content="/assets/images/og_image-1200x630.jpg" />
+          </head>
+          <body className={inter.className + ' ' + 'bg-purple-dark text-white'}>
+            <Navbar />
+            {children}
+            <Footer />
+          </body>
+        </html>
+        );
 }
