@@ -2,6 +2,7 @@ import Divider from "./Divider";
 import Link from "next/link";
 
 export default function Navbar() {
+
   return (
     <>
       <div className="flex px-10 py-5 justify-between items-center">
