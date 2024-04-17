@@ -20,24 +20,8 @@ export default function Hero() {
 
         {/* Content */}
         <div className="mainLayout py-10 md:py-40 relative z-10">
-          <div className="block md:flex items-center justify-center gap-x-5">
-            <div className="w-full md:w-full flex justify-center">
-              <div className="w-fit">
-                <div className="mt-3 text-4xl font-bold">
-                  My Spotify Catalog
-                </div>
-                <div className="text-gray-400 text-center mt-2">
-                    List of songs/beats released on spotify.
-                </div>
-                <div className="flex justify-center mt-3">
-                  <Link href={SPOTIFY_URL} target={"_blank"}>
-                    <button className="border-2 border-gray-600 py-3 px-4 rounded-lg">
-                      Spotify
-                    </button>
-                  </Link>
-                </div>
-              </div>
-            </div>
+          <div>
+            <input placeholder="Search..." />
           </div>
         </div>
       </div>
