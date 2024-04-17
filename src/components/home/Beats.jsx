@@ -159,7 +159,89 @@ export default function Beats() {
       imgUrl: "",
     },
   ];
+  const trap_beats = [
+    {
+      title: "Trap City",
+      description: "Dark trap beat with urban vibes",
+      genre: "Trap",
+      imgUrl: "",
+    },
+    {
+      title: "Trap King",
+      description: "Regal trap beat fit for a king",
+      genre: "Trap",
+      imgUrl: "",
+    },
+    {
+      title: "Trapstar",
+      description: "Trap beat for the streets",
+      genre: "Trap",
+      imgUrl: "",
+    },
+    {
+      title: "Trap Symphony",
+      description: "Epic orchestral trap beat",
+      genre: "Trap",
+      imgUrl: "",
+    },
+    {
+      title: "Trap Wave",
+      description: "Chill trap beat with wavey melodies",
+      genre: "Trap",
+      imgUrl: "",
+    },
+    {
+      title: "Mystic Trap",
+      description: "Mystical and mysterious trap beat",
+      genre: "Trap",
+      imgUrl: "",
+    },
+    {
+      title: "Trap Dreams",
+      description: "Dreamy trap beat for introspection",
+      genre: "Trap",
+      imgUrl: "",
+    },
+  ];
   
+  const amapiano_beats = [
+    {
+      title: "Amapiano Groove",
+      description: "Groovy Amapiano beat for the dancefloor",
+      genre: "Amapiano",
+      imgUrl: "",
+    },
+    {
+      title: "Amapiano Bliss",
+      description: "Blissful Amapiano beat for relaxation",
+      genre: "Amapiano",
+      imgUrl: "",
+    },
+    {
+      title: "Amapiano Vibes",
+      description: "Feel-good Amapiano beat with vibes",
+      genre: "Amapiano",
+      imgUrl: "",
+    },
+    {
+      title: "Amapiano Sunset",
+      description: "Melancholic Amapiano beat for the sunset",
+      genre: "Amapiano",
+      imgUrl: "",
+    },
+    {
+      title: "Amapiano Groove",
+      description: "Soulful Amapiano beat for the soul",
+      genre: "Amapiano",
+      imgUrl: "",
+    },
+    {
+      title: "Amapiano Paradise",
+      description: "Paradisiacal Amapiano beat for paradise",
+      genre: "Amapiano",
+      imgUrl: "",
+    },
+  ];
 
   return (
     <>
@@ -189,7 +271,7 @@ export default function Beats() {
         <div className="mb-5">
           <ComponentTitle name="Amapiano" url="/beats/?genre=amapiano" />
           <div className="beatFlex">
-            {afro_beats.map((beat, index) => (
+            {amapiano_beats.map((beat, index) => (
               <div key={index}>
                 <BeatCard
                   title={beat.title}
@@ -221,7 +303,7 @@ export default function Beats() {
         <div className="mb-5">
           <ComponentTitle name="Traps" url="/beats/?genre=trap" />
           <div className="beatFlex">
-            {afro_beats.map((beat, index) => (
+            {trap_beats.map((beat, index) => (
               <div key={index}>
                 <BeatCard
                   title={beat.title}
