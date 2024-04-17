@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --col-purple-dark: rgb(13,3,25);
+  --col-purple-dark-2: rgb(16,6,28);
+  --col-pink: rgb(247,39,125);
+  --col-wood: rgb(255,215,128);
+  --col-blue: rgb(40,247,180);
+  --col-white: white;
+  --col-black: black;
+}
+
+.bg-pink{
+  background: var(--col-pink);
+}
+
+.text-pink{
+  color: var(--col-pink);
+}
+
+.border-pink{
+  border-color: var(--col-pink);
+}
+
+.bg-purple-dark {
+  background: var(--col-purple-dark);
+}
+
+.text-purple-dark {
+  color: var(--col-purple-dark);
+}
+
+.bg-purple-dark-2 {
+  background: var(--col-purple-dark-2);
+}
+
+.text-purple-dark-2 {
+  color: var(--col-purple-dark-2);
+}
+
+.bg-wood {
+  background: var(--col-wood);
+}
+
+.border-wood {
+  border-color: var(--col-wood);
+}
+
+.text-wood {
+  color: var(--col-wood);
+}
+
+.bg-blue {
+  background: var(--col-blue);
+}
+
+.text-blue {
+  color: var(--col-blue);
+}
+
+.bg-white {
+  background: var(--col-white);
+}
+
+.text-white {
+  color: var(--col-white);
+}
+
+.bg-black {
+  background: var(--col-black);
+}
+
+.text-black {
+  color: var(--col-black);
+}
+
+@layer components{
+  .mainLayout{
+    @apply py-10 px-16;
+  }
+  .footerIcon{
+    @apply text-wood text-lg;
+  }
+}
