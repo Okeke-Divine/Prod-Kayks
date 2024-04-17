@@ -26,7 +26,7 @@ export default function Navbar() {
           <Link href="/beats">
             <button className="bg-pink rounded-md py-2 px-3">All Beats</button>
           </Link>
-          <button className="p-2 rounded-lg border-2 border-red-300">
+          <button className="block md:hidden p-2 rounded-lg border-2 duration-300 border-transparent hover:border-red-300">
             <i class="relative top-[2px] fi fi-ts-bars-staggered"></i>
           </button>
         </div>
