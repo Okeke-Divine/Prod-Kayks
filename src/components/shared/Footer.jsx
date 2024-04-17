@@ -7,10 +7,10 @@ import {TWITTER_URL, TIKTOK_URL, INSTAGRAM_URL, YOUTUBE_URL, FACEBOOK_URL} from 
 export default function Footer() {
   const socials = [
     { name: "Tiktok", url: TIKTOK_URL },
-    { name: "Instagram", url: "https://www.instagram.com/prod.kayks/" },
-    { name: "Youtube", url: "https://www.youtube.com/@prodkayks_beats" },
-    { name: "Twitter", url: "https://twitter.com/prod_kayks" },
-    { name: "Facebook", url: "" },
+    { name: "Instagram", url: INSTAGRAM_URL },
+    { name: "Youtube", YOUTUBE_URL },
+    { name: "Twitter", TWITTER_URL },
+    { name: "Facebook", FACEBOOK_URL },
     // { name: "Push.fm", url: "" },
     // { name: "Spotify", url: "" },
   ];
