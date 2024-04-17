@@ -126,14 +126,50 @@ export default function Beats() {
         {/* amapiano */}
         <div className="mb-5">
           <ComponentTitle name="Amapiano" url="/beats/?genre=amapiano" />
+          <div className="beatFlex">
+            {afro_beats.map((beat, index) => (
+              <div key={index}>
+                <BeatCard
+                  title={beat.title}
+                  description={beat.description}
+                  genre={beat.genre}
+                  imgUrl={beat.imgUrl}
+                />
+              </div>
+            ))}
+          </div>
         </div>
         {/* drills */}
         <div className="mb-5">
           <ComponentTitle name="Drills" url="/beats/?genre=drill" />
+          <div className="beatFlex">
+            {afro_beats.map((beat, index) => (
+              <div key={index}>
+                <BeatCard
+                  title={beat.title}
+                  description={beat.description}
+                  genre={beat.genre}
+                  imgUrl={beat.imgUrl}
+                />
+              </div>
+            ))}
+          </div>
         </div>
         {/* traps */}
         <div className="mb-5">
           <ComponentTitle name="Traps" url="/beats/?genre=trap" />
+          <div className="beatFlex">
+            {afro_beats.map((beat, index) => (
+              <div key={index}>
+                <BeatCard
+                  title={beat.title}
+                  description={beat.description}
+                  genre={beat.genre}
+                  imgUrl={beat.imgUrl}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <br />
