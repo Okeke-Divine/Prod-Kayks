@@ -11,18 +11,18 @@ export default function MySongs() {
       url: "https://open.spotify.com/track/5eg6ulV8GIOxvODisYE53c",
     },
     {
-      name: "Black Santa Amapiano",
+      name: "Amapiano Haven",
       imgUrl:
-        "https://i.scdn.co/image/ab67616d00001e02a65b2df75d46e3c5066580bd",
+        "https://i.scdn.co/image/ab67616d00001e0226b72ee6d24e80c649bb0f87",
       artist: "Prod. Kayks",
-      url: "https://open.spotify.com/track/5eg6ulV8GIOxvODisYE53c",
+      url: "https://open.spotify.com/track/6UkJRQXTiTS54M8Wv9Ver0",
     },
     {
-      name: "Black Santa Amapiano",
+      name: "Testify - Amapiano Version",
       imgUrl:
-        "https://i.scdn.co/image/ab67616d00001e02a65b2df75d46e3c5066580bd",
-      artist: "Prod. Kayks",
-      url: "https://open.spotify.com/track/5eg6ulV8GIOxvODisYE53c",
+        "https://i.scdn.co/image/ab67616d00001e02ff579eba6d0ef38f9985a780",
+      artist: "Bluenax ft. Prod. Kayks",
+      url: "https://open.spotify.com/track/2bXcTyOXcyoIgjm4gDeXAp",
     },
   ];
 
