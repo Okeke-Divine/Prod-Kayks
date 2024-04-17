@@ -24,13 +24,13 @@ export default function RootLayout({ children }) {
         <meta property="description" content="Get industry-ready instrumentals to fuel your next track." />
         <meta name="url" content="https://prodkayks.vercel.app/" />
         {/* facebook */}
-        <meta property="og:title" content="Prod. Kayks | Music Producer | Get industry-ready instrumentals to fuel your next track." />
+        <meta property="og:title" content="Prod. Kayks | Music Producer | Beats" />
         <meta property="og:description" content="Get industry-ready instrumentals to fuel your next track." />
         <meta property="og:url" content="https://prodkayks.vercel.app/" />
         <meta property="og:image" content="/assets/images/og_image-1200x630.jpg" />
           {/* twitter */}
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Prod. Kayks | Music Producer | Get industry-ready instrumentals to fuel your next track." />
+          <meta name="twitter:title" content="Prod. Kayks | Music Producer | Beats" />
           <meta name="twitter:description" content="Get industry-ready instrumentals to fuel your next track." />
           <meta name="twitter:url" content="https://prodkayks.vercel.app/" />
           <meta name="twitter:creator" content="@okekedivine__" />
