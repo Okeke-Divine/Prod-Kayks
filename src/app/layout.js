@@ -6,7 +6,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Prod. Kayks | Music Producer",
+  title: "Prod. Kayks | Music Producer | Get industry-ready instrumentals to fuel your next track.",
   description: "Get industry-ready instrumentals to fuel your next track."
 };
 
@@ -22,12 +22,14 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Okeke Divine-Vessel" />
         <meta property="description" content="Get industry-ready instrumentals to fuel your next track." />
+        <meta name="url" content="https://prodkayks.vercel.app/" />
         {/* facebook */}
-        <meta property="og:title" content="Prod. Kayks | Music Producer" />
+        <meta property="og:title" content="Prod. Kayks | Music Producer | Get industry-ready instrumentals to fuel your next track." />
         <meta property="og:description" content="Get industry-ready instrumentals to fuel your next track." />
         <meta property="og:url" content="https://prodkayks.vercel.app/" />
         {/* twitter */}
-        <meta name="twitter:title" content="Prod. Kayks | Music Producer" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Prod. Kayks | Music Producer | Get industry-ready instrumentals to fuel your next track." />
         <meta name="twitter:description" content="Get industry-ready instrumentals to fuel your next track." />
         <meta name="twitter:url" content="https://prodkayks.vercel.app/" />
         <meta name="twitter:creator" content="@okekedivine__" />
