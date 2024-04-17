@@ -18,7 +18,7 @@ export default function Navbar() {
           </Link>
           <div className={`fixed md:static z-50 md:z-1 bg-purple-dark-2 md:bg-transparent w-full md:w-fit top-0 ${sidebarIsVisible ? 'left-0' : '-left-full'} p-5 md:p-0 block md:flex items-center gap-x-5`}>
             <div
-              className="block md:hidden cursor-pointer"
+              className="flex justify-end md:hidden cursor-pointer"
               onClick={() => setSidebarIsVisible(false)}
             >
               <i className="fi fi-tr-circle-xmark"></i>
