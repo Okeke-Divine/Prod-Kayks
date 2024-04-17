@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
           <meta name="twitter:creator" content="@okekedivine__" />
           <meta name="twitter:image" content="/assets/images/og_image-1200x630.jpg" />
           </head>
-          <body className={inter.className + ' ' + 'bg-purple-dark text-white'}>
+          <body className={inter.className + ' ' + 'bg-purple-dark text-white '}>
             <Navbar />
             {children}
             <Footer />
