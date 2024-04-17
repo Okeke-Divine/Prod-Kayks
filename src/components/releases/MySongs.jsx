@@ -23,6 +23,7 @@ export default function MySongs() {
         "https://i.scdn.co/image/ab67616d00001e02ff579eba6d0ef38f9985a780",
       artist: "Bluenax ft. Prod. Kayks",
       url: "https://open.spotify.com/track/2bXcTyOXcyoIgjm4gDeXAp",
+      text: "500k+ streams (all platforms)"
     },
   ];
 
@@ -44,6 +45,11 @@ export default function MySongs() {
                   />
                 </div>
                 <div>
+                  {/* {song.text ? ( */}
+                    <div className="text-xs text-green-300  w-fit">
+                      {song.text}
+                    </div>
+                  {/* ) : (<></>)} */}
                   <div className="font-bold">{song.name}</div>
                   <div className="text-gray-400">{song.artist}</div>
                 </div>
