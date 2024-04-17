@@ -27,7 +27,7 @@ export default function Hero() {
               </div>
               <div className="mt-5 text-gray-400">
                 Over 3 years of crafting fire beats for renowned artists like
-                Schway, Joven Lastkid, Ecoh, Biggie Fx, VoltageIsNotAKid etc as
+                Schway, Joven Lastkid, Ecoh MDK, Biggie Fx, VoltageIsNotAKid etc as
                 well as top labels like{" "}
                 <Link
                   className="text-wood"
