@@ -15,8 +15,7 @@ export default function Beats() {
 
         <div className="">
           <ComponentTitle name="Drills" url="/beats/?genre=drill" />
-          <div className="flex flex-nowrap whitespace-nowrap overflow-x-auto gap-3">
-                                    
+          <div className="flex flex-nowrap whitespace-nowrap overflow-x-auto gap-3 pb-2">
             <BeatCard />
             <BeatCard />
             <BeatCard />

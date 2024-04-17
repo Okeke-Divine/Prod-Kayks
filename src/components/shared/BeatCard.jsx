@@ -10,7 +10,7 @@ export default function BeatCard() {
           <CTag name="Drill" />
         </div>
         <div className="font-bold mt-1">Darkness</div>
-        <div className="text-gray-400 break-words">Metro Boomin x Central Cee x Pop Smoke type beat</div>
+        <div className="text-gray-400 break-words text-wrap w-[250px]">Metro Boomin x Central Cee x Pop Smoke type beat</div>
       </div>
     </>
   );
