@@ -2,6 +2,7 @@ import Link from "next/link";
 import CTag from "../shared/CTag";
 import Divider from "../shared/Divider";
 import ComponentTitle from "../shared/ComponentTitle";
+import BeatCard from "../shared/BeatCard";
 
 export default function Beats() {
   return (
@@ -13,15 +14,20 @@ export default function Beats() {
         <div className="my-5 font-bold text-4xl text-center">Beats</div>
 
         <div className="">
-          <div className="flex justify-between items-center">
-            <div className="font-bold text-2xl">Drills</div>
-            <div>
-              <Link className="text-wood" href={"/beats/?genre=drill"}>
-                See All
-              </Link>
-            </div>
+          <ComponentTitle name="Drills" url="/beats/?genre=drill" />
+          <div className="flex whitespace-nowrap overflow-x-auto">
+            <BeatCard />
+            <BeatCard />
+            <BeatCard />
+            <BeatCard />
+            <BeatCard />
+            <BeatCard />
+            <BeatCard />
+            <BeatCard />
+            <BeatCard />
+            <BeatCard />
+            <BeatCard />
           </div>
-          <ComponentTitle name="Drill" url="/beats/?genre=drill" />
         </div>
       </div>
       <br />
