@@ -10,8 +10,9 @@ export default function Beats() {
         </div>
         <div className="my-5 font-bold text-4xl text-center">Beats</div>
 
-        <div className="text-center">Coming soon...</div>
+        <div className="text-center">Coming soon....</div>
       </div>
+      <br />
       <Divider />
     </>
   );
