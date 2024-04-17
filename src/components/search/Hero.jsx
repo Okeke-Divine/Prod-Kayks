@@ -19,9 +19,9 @@ export default function Hero() {
         />
 
         {/* Content */}
-        <div className="mainLayout py-10 md:py-40 relative z-10">
+        <div className="mainLayout py-10 md:py-10 relative z-10">
           <div>
-            <input placeholder="Search..." />
+            <input placeholder="Search..." className="w-full py-2 px-5 border-wood border-2 rounded-lg" />
           </div>
         </div>
       </div>
