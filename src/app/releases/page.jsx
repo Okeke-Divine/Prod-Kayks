@@ -1,9 +1,9 @@
-import Hero from "../../components/releases/Hero"
+import Hero from "../../components/releases/Hero";
 
-export default function Releases(){
-    return (
-        <>
+export default function Releases() {
+  return (
+    <>
       <Hero />
-        </>
-      );
+    </>
+  );
 }

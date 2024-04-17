@@ -40,14 +40,9 @@ export default function Hero() {
                 industry-ready instrumentals to fuel your next track.
               </div>
               <div className="flex flex-wrap gap-5 items-center mt-10">
-                <Link href="/#services">
+                <Link href="/#services" target={"_blank"}>
                   <button className="border-2 border-gray-600 py-3 px-4 rounded-lg">
                     Services
-                  </button>
-                </Link>
-                <Link href="/beats">
-                  <button className="border-2 border-pink py-3 px-4 rounded-lg bg-pink">
-                    Beats
                   </button>
                 </Link>
               </div>
