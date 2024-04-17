@@ -20,7 +20,7 @@ export default function Navbar() {
           </div>
         </div>
         <div className="w-fit flex gap-x-5 items-center">
-          <Link href="#">Sign up</Link>
+          <Link href="#" className="hidden md:block">Sign up</Link>
           <Link href="/beats">
             <button className="bg-pink rounded-md py-2 px-3">All Beats</button>
           </Link>
