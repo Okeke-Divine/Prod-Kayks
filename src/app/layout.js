@@ -30,6 +30,7 @@ export default function RootLayout({ children }) {
         <meta name="twitter:title" content="Prod. Kayks | Music Producer" />
         <meta name="twitter:description" content="Get industry-ready instrumentals to fuel your next track." />
         <meta name="twitter:url" content="https://prodkayks.vercel.app/" />
+        <meta name="twitter:creator" content="@okekedivine__" />
       </head>
       <body className={inter.className + ' ' + 'bg-purple-dark text-white'}>
         <Navbar />
