@@ -12,7 +12,92 @@ export default function Beats() {
       genre: "Afrobeat",
       imgUrl: "",
     },
+    {
+      title: "Afro Groove",
+      description: "Energetic Burna Boy type beat",
+      genre: "Afrobeat",
+      imgUrl: "",
+    },
+    {
+      title: "Afro Fusion",
+      description: "Funky Wizkid type beat",
+      genre: "Afrobeat",
+      imgUrl: "",
+    },
+    {
+      title: "Afro Swing",
+      description: "Smooth Afro B type beat",
+      genre: "Afrobeat",
+      imgUrl: "",
+    },
+    {
+      title: "Afro Pop",
+      description: "Upbeat Davido type beat",
+      genre: "Afrobeat",
+      imgUrl: "",
+    },
+    {
+      title: "Afro Jazz",
+      description: "Jazzy Fela Kuti type beat",
+      genre: "Afrobeat",
+      imgUrl: "",
+    },
+    {
+      title: "Afro Dancehall",
+      description: "Danceable Patoranking type beat",
+      genre: "Afrobeat",
+      imgUrl: "",
+    },
+    {
+      title: "Afro Reggae",
+      description: "Reggae-infused Afrobeat",
+      genre: "Afrobeat",
+      imgUrl: "",
+    },
+    {
+      title: "Afro Trap",
+      description: "Trap-influenced Afrobeat",
+      genre: "Afrobeat",
+      imgUrl: "",
+    },
+    {
+      title: "Afro Highlife",
+      description: "Classic Highlife style beat",
+      genre: "Afrobeat",
+      imgUrl: "",
+    },
+    {
+      title: "Afro R&B",
+      description: "Soulful Afrobeat with R&B vibes",
+      genre: "Afrobeat",
+      imgUrl: "",
+    },
+    {
+      title: "Afro House",
+      description: "House music-inspired Afrobeat",
+      genre: "Afrobeat",
+      imgUrl: "",
+    },
+    {
+      title: "Afro Soca",
+      description: "Soca-infused Afrobeat",
+      genre: "Afrobeat",
+      imgUrl: "",
+    },
+    {
+      title: "Afro EDM",
+      description: "Electronic Dance Music with Afrobeat elements",
+      genre: "Afrobeat",
+      imgUrl: "",
+    },
+    {
+      title: "Afro Chill",
+      description: "Relaxed Afrobeat for chilling",
+      genre: "Afrobeat",
+      imgUrl: "",
+    },
   ];
+  
 
   return (
     <>
