@@ -17,12 +17,19 @@ export default function RootLayout({ children }) {
         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-thin-straight/css/uicons-thin-straight.css' />
         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-thin-rounded/css/uicons-thin-rounded.css' />
         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-brands/css/uicons-brands.css' />
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <meta name="theme-color" content="#000000" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="Okeke Divine-Vessel" />
+        <meta property="description" content="Get industry-ready instrumentals to fuel your next track." />
         {/* facebook */}
         <meta property="og:title" content="Prod. Kayks | Music Producer" />
         <meta property="og:description" content="Get industry-ready instrumentals to fuel your next track." />
+        <meta property="og:url" content="https://prodkayks.vercel.app/" />
         {/* twitter */}
         <meta name="twitter:title" content="Prod. Kayks | Music Producer" />
-        <meta property="twitter:description" content="Get industry-ready instrumentals to fuel your next track." />
+        <meta name="twitter:description" content="Get industry-ready instrumentals to fuel your next track." />
+        <meta name="twitter:url" content="https://prodkayks.vercel.app/" />
       </head>
       <body className={inter.className + ' ' + 'bg-purple-dark text-white'}>
         <Navbar />
