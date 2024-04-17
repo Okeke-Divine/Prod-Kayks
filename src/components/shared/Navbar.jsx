@@ -24,16 +24,16 @@ export default function Navbar() {
               <i className="fi fi-tr-circle-xmark"></i>
             </div>
             <div>
-              <Link href="/">Home</Link>
+              <Link href="/" onClick={() => setSidebarIsVisible(false)}>Home</Link>
             </div>
             <div>
-              <Link href="/search">Search</Link>
+              <Link href="/search" onClick={() => setSidebarIsVisible(false)}>Search</Link>
             </div>
             <div>
-              <Link href="/releases">Releases</Link>
+              <Link href="/releases" onClick={() => setSidebarIsVisible(false)}>Releases</Link>
             </div>
             <div>
-              <Link href="/about">About</Link>
+              <Link href="/about" onClick={() => setSidebarIsVisible(false)}>About</Link>
             </div>
           </div>
         </div>
