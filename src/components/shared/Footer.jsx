@@ -82,7 +82,7 @@ export default function Footer() {
           <Divider />
         </div>
         <div className="text-center">
-          &copy; Prod. Kayks 2024 | Built by{" "}
+          &copy; Prod. Kayks 2024 | Designed and Built by{" "}
           <Link
             target="_blank"
             className="text-wood"
