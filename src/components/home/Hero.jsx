@@ -47,7 +47,7 @@ export default function Hero() {
                 </Link>
                 <Link href="/beats">
                   <button className="border-2 border-pink py-3 px-4 rounded-lg bg-pink">
-                    Beats
+                    Whatsapp
                   </button>
                 </Link>
               </div>
