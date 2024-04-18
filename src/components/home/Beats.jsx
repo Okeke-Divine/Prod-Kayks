@@ -245,7 +245,7 @@ export default function Beats() {
 
   return (
     <>
-      <div className="mainLayout" id="services">
+      <div className="mainLayout" id="beats">
         <div className="flex justify-center mb-2">
           <CTag name="Beats" />
         </div>
