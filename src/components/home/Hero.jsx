@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Divider from "../shared/Divider";
 import CTag from "../shared/CTag";
+import { WHATSAPP_URL } from "../../constants/shared/socials"
 
 export default function Hero() {
   return (
@@ -45,7 +46,7 @@ export default function Hero() {
                     Services
                   </button>
                 </Link>
-                <Link href="/beats">
+                <Link href={WHATSAPP_URL}>
                   <button className="border-2 border-pink py-3 px-4 rounded-lg bg-pink">
                     Whatsapp
                   </button>
