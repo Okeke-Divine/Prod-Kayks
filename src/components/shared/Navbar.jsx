@@ -42,7 +42,7 @@ export default function Navbar() {
             Sign up
           </Link>
           <Link href="/beats">
-            <button className="bg-pink rounded-md py-2 px-3">All Beats</button>
+            <button className="bg-pink rounded-md py-2 px-3">Beats</button>
           </Link>
           <button
             onClick={() => setSidebarIsVisible(true)}
