@@ -10,7 +10,7 @@ export default function Beats() {
       title: "Riddim",
       description: "Calm Arya Starr type beat",
       genre: "Afrobeat",
-      imgUrl: "",
+      imgUrl: "/assets/images/covers/1.jgp",
     },
     {
       title: "Afro Groove",
