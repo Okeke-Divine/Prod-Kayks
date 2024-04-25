@@ -4,6 +4,7 @@ import {
   INSTAGRAM_URL,
   YOUTUBE_URL,
   FACEBOOK_URL,
+  EMAIL_URL,
 } from "../../constants/shared/socials";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,6 +12,7 @@ import Divider from "../shared/Divider";
 
 export default function Hero() {
   const socials = [
+    { name: "Email", url: EMAIL_URL, iconClass: "fi fi-brands-facebook" },
     { name: "Tiktok", url: TIKTOK_URL, iconClass: "fi fi-brands-tik-tok" },
     {
       name: "Instagram",
