@@ -12,6 +12,12 @@ export default function BeatCard({ title, description, genre, imgUrl }) {
           />
         </div>
         {/*  */}
+        <div className="flex flex-wrap gap-3">
+          <div className="text-wood">$19</div>
+          <div className="text-wood">$19</div>
+          <div className="text-wood">$19</div>
+          <div className="text-wood">$19</div>
+        </div>
         <div>
           <CTag name={genre} />
         </div>
