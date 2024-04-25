@@ -52,8 +52,8 @@ export default function BeatCard({
         <div className="py-2">
           <Divider />
         </div>
-        <div>
-          <button>Free Download</button>
+        <div className="flex justify-center py-2">
+          <button className="bg-pink text-white py-2 px-3 text-sm rounded-lg cursor-pointer">Free Download</button>
         </div>
       </div>
     </>
