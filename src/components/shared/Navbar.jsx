@@ -23,13 +23,13 @@ export default function Navbar() {
             >
               <i className="fi fi-tr-circle-xmark"></i>
             </div>
-            <div>
+            <div className="mb-2 md:mb-0">
               <Link href="/" onClick={() => setSidebarIsVisible(false)}>Home</Link>
             </div>
-            <div>
+            <div className="mb-2 md:mb-0">
               <Link href="/search" onClick={() => setSidebarIsVisible(false)}>Search</Link>
             </div>
-            <div>
+            <div className="mb-2 md:mb-0">
               <Link href="/releases" onClick={() => setSidebarIsVisible(false)}>Releases</Link>
             </div>
             <div>
