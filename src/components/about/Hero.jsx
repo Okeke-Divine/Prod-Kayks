@@ -49,9 +49,11 @@ export default function Hero() {
                 <div className="text-wood text-center mt-2">
                   Get industry-ready instrumentals to fuel your next track.
                 </div>
-                <div className="mt-5 flex gap-x-5">
+                <div className="mt-5 flex justify-center gap-x-5">
                   {socials.map((social, index) => (
-                    <div key={index}>test</div>
+                    <Link key={index} href={social.url} target={"_blank"}>
+                      <i className={social.iconClass}></i>
+                    </Link>
                   ))}
                 </div>
                 <div className="mt-10 flex gap-x-5">
