@@ -7,19 +7,19 @@ export default function BeatCard({
   description,
   genre,
   imgUrl,
-  bpm,
-  key,
-  price,
-  beatUrl,
-  beatDownloadUrl,
 }) {
-  const images = ["/assets/images/covers/1.jpg", "/assets/images/covers/2.jpg"];
+  // bpm,
+  // key,
+  // price,
+  // beatUrl,
+  // beatDownloadUrl,
+  // const images = ["/assets/images/covers/1.jpg", "/assets/images/covers/2.jpg"];
 
-  function getRandomImageUrl(images) {
-    const randomIndex = Math.floor(Math.random() * images.length);
-    return images[randomIndex];
-  }
-  imgUrl = getRandomImageUrl(images);
+  // function getRandomImageUrl(images) {
+    // const randomIndex = Math.floor(Math.random() * images.length);
+    // return images[randomIndex];
+  // }
+  // imgUrl = getRandomImageUrl(images);
   return (
     <>
       <div className="w-[250px] h-fit p-2 rounded-lg border-2 border-white">
@@ -27,7 +27,7 @@ export default function BeatCard({
         <div className="w-full h-[220px] bg-wood rounded-lg mb-3 overflow-hidden relative">
           <img
             className="absolute inset-0 object-cover w-full h-full"
-            // src={imgUrl}
+            src={imgUrl}
             alt={title}
           />
         </div>
