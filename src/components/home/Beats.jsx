@@ -1,3 +1,4 @@
+'use client';
 import Link from "next/link";
 import CTag from "../shared/CTag";
 import Divider from "../shared/Divider";
@@ -10,7 +11,7 @@ export default function Beats() {
       title: "Riddim",
       description: "Calm Arya Starr type beat",
       genre: "Afrobeat",
-      imgUrl: "/assets/images/covers/1.jgp",
+      imgUrl: "/assets/images/covers/1.jpg",
     },
     {
       title: "Afro Groove",
