@@ -1,4 +1,6 @@
 import CTag from "../shared/CTag";
+import Seperator from "../shared/Seperator";
+
 export default function BeatCard({ title, description, genre, imgUrl }) {
   return (
     <>
@@ -21,7 +23,7 @@ export default function BeatCard({ title, description, genre, imgUrl }) {
         </div>
         <div className="flex flex-wrap gap-2">
           <div className="text-wood">$19</div>
-          <div className="flex justify-center items-center"><div className="w-1 h-1 rounded-full bg-gray-400"></div></div>
+          <Seperator />
         </div>
       </div>
     </>
