@@ -32,6 +32,9 @@ export default function Hero() {
                 <div className="text-wood text-center mt-2">
                   Get industry-ready instrumentals to fuel your next track.
                 </div>
+                <div className="mt-5">
+                  
+                </div>
               </div>
             </div>
           </div>
