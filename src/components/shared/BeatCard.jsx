@@ -1,5 +1,6 @@
 import CTag from "../shared/CTag";
 import Seperator from "../shared/Seperator";
+import Divider from "../shared/Divider";
 
 export default function BeatCard({ title, description, genre, imgUrl }) {
   return (
@@ -21,9 +22,21 @@ export default function BeatCard({ title, description, genre, imgUrl }) {
         <div className="text-gray-400 break-words text-wrap w-[250px]">
           {description}
         </div>
-        <div className="flex flex-wrap gap-2">
+        <div className="py-2">
+          <Divider />
+        </div>
+        <div className="flex flex-wrap gap-2 text-gray-400 text-sm">
           <div className="text-wood">$19</div>
           <Seperator />
+          <div>127 BPM</div>
+          <Seperator />
+          <div>C# Maj</div>
+        </div>
+        <div className="py-2">
+          <Divider />
+        </div>
+        <div>
+          <button>Free Download</button>
         </div>
       </div>
     </>
