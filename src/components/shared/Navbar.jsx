@@ -13,7 +13,7 @@ export default function Navbar() {
           <Link href="/">
             <div className="flex items-center gap-x-3">
               <div className="w-7 h-7 bg-pink rounded-full"></div>
-              <div className="text-xl font-bold">Prod. Kayks</div>
+              <div className="text-xl font-bold"><span className="hidden md:block">Prod. </span>Kayks</div>
             </div>
           </Link>
           <div className={`fixed md:static z-50 md:z-1 bg-purple-dark-2 md:bg-transparent w-full md:w-fit top-0 ${sidebarIsVisible ? 'left-0' : '-left-full'} p-5 md:p-0 block md:flex items-center gap-x-5`}>
