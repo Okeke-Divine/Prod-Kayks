@@ -52,9 +52,13 @@ export default function BeatCard({
         <div className="py-2">
           <Divider />
         </div>
-        <div className="flex flex-wrap gap-2 justify-center py-2">
-          <button className="bg-pink text-white py-2 px-3 text-sm rounded-lg cursor-pointer">Free Download</button>
-          <button className="bg-wood text-white py-2 px-3 text-sm rounded-lg cursor-pointer">Buy</button>
+        <div className="flex flex-wrap gap-2 py-2">
+          <button className="bg-pink text-white py-2 px-3 text-sm rounded-lg cursor-pointer">
+            Buy
+          </button>
+          <button className="bg-purple-dark-2 text-white py-2 px-3 text-sm rounded-lg cursor-pointer">
+            Free Download
+          </button>
         </div>
       </div>
     </>
