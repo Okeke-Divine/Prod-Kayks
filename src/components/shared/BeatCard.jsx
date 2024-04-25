@@ -2,7 +2,17 @@ import CTag from "../shared/CTag";
 import Seperator from "../shared/Seperator";
 import Divider from "../shared/Divider";
 
-export default function BeatCard({ title, description, genre, imgUrl }) {
+export default function BeatCard({
+  title,
+  description,
+  genre,
+  imgUrl,
+  bpm,
+  key,
+  price,
+  beatUrl,
+  beatDownloadUrl,
+}) {
   const images = ["/assets/images/covers/1.jpg", "/assets/images/covers/2.jpg"];
 
   function getRandomImageUrl(images) {
