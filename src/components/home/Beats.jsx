@@ -249,8 +249,8 @@ export default function Beats() {
         <div className="flex justify-center mb-2">
           <CTag name="Beats" />
         </div>
-        <div className="my-5 font-bold text-4xl text-center">Beats</div>
-        <div className="text-center mt-2 text-wood">Your first hit starts here</div>
+        <div className="mt-5 font-bold text-4xl text-center">Beats</div>
+        <div className="text-center mb-5 text-wood">Your first hit starts here!</div>
 
         {/* afro */}
         <div className="mb-5">
