@@ -22,7 +22,7 @@ export default function BeatCard({
   imgUrl = getRandomImageUrl(images);
   return (
     <>
-      <div className="w-[250px] h-full p-2 rounded-lg border-2 border-white">
+      <div className="w-[250px] h-fit p-2 rounded-lg border-2 border-white">
         {/* image container */}
         <div className="w-full h-[220px] bg-blue-200 rounded-lg mb-3 overflow-hidden relative">
           <img
