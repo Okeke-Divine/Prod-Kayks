@@ -8,7 +8,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="flex px-10 py-5 justify-between items-center">
+      <div className="flex px-5 md:px-10 py-5 justify-between items-center">
         <div className="w-fit flex gap-x-10 items-center">
           <Link href="/">
             <div className="flex items-center gap-x-3">
