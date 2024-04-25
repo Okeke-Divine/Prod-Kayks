@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import Link from "next/link";
 import CTag from "../shared/CTag";
 import Divider from "../shared/Divider";
@@ -204,7 +204,7 @@ export default function Beats() {
       imgUrl: "",
     },
   ];
-  
+
   const amapiano_beats = [
     {
       title: "Amapiano Groove",
@@ -244,6 +244,8 @@ export default function Beats() {
     },
   ];
 
+
+
   return (
     <>
       <div className="mainLayout" id="beats">
@@ -251,7 +253,9 @@ export default function Beats() {
           <CTag name="Beats" />
         </div>
         <div className="mt-5 font-bold text-4xl text-center">Beats</div>
-        <div className="text-center mb-5 text-wood">Your first hit starts here!</div>
+        <div className="text-center mb-5 text-wood">
+          Your first hit starts here!
+        </div>
 
         {/* afro */}
         <div className="mb-5">

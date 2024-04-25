@@ -3,6 +3,13 @@ import Seperator from "../shared/Seperator";
 import Divider from "../shared/Divider";
 
 export default function BeatCard({ title, description, genre, imgUrl }) {
+  const images = ["/assets/images/covers/1.jpg", "/assets/images/covers/2.jpg"];
+
+  function getRandomImageUrl(images) {
+    const randomIndex = Math.floor(Math.random() * images.length);
+    return images[randomIndex];
+  }
+  imgUrl = getRandomImageUrl(images);
   return (
     <>
       <div className="w-[250px] h-full p-2 rounded-lg border-2 border-white">
