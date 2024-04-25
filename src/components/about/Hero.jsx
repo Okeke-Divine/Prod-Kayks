@@ -15,11 +15,11 @@ export default function Hero() {
     {
       name: "Instagram",
       url: INSTAGRAM_URL,
-      iconClass: "fi fi-brands-tik-tok",
+      iconClass: "fi fi-brands-instagram",
     },
-    { name: "Youtube", url: YOUTUBE_URL, iconClass: "fi fi-brands-tik-tok" },
-    { name: "Twitter", url: TWITTER_URL, iconClass: "fi fi-brands-tik-tok" },
-    { name: "Facebook", url: FACEBOOK_URL, iconClass: "fi fi-brands-tik-tok" },
+    { name: "Youtube", url: YOUTUBE_URL, iconClass: "fi fi-brands-youtube" },
+    { name: "Twitter", url: TWITTER_URL, iconClass: "fi fi-brands-twitter" },
+    { name: "Facebook", url: FACEBOOK_URL, iconClass: "fi fi-brands-facebook" },
   ];
 
   return (
@@ -55,28 +55,6 @@ export default function Hero() {
                       <i className={social.iconClass}></i>
                     </Link>
                   ))}
-                </div>
-                <div className="mt-10 flex gap-x-5">
-                  <div>
-                    <Link href={socials[0].url} target="_blank">
-                      <i className="footerIcon fi fi-brands-tik-tok"></i>
-                    </Link>
-                  </div>
-                  <div>
-                    <Link href={socials[1].url} target="_blank">
-                      <i className="footerIcon fi fi-brands-instagram"></i>
-                    </Link>
-                  </div>
-                  <div>
-                    <Link href={socials[2].url} target="_blank">
-                      <i className="footerIcon fi fi-brands-youtube"></i>
-                    </Link>
-                  </div>
-                  <div>
-                    <Link href={socials[4].url} target="_blank">
-                      <i className="footerIcon fi fi-brands-facebook"></i>
-                    </Link>
-                  </div>
                 </div>
               </div>
             </div>
