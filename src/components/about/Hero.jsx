@@ -11,11 +11,15 @@ import Divider from "../shared/Divider";
 
 export default function Hero() {
   const socials = [
-    { name: "Tiktok", url: TIKTOK_URL },
-    { name: "Instagram", url: INSTAGRAM_URL },
-    { name: "Youtube", url: YOUTUBE_URL },
-    { name: "Twitter", url: TWITTER_URL },
-    { name: "Facebook", url: FACEBOOK_URL },
+    { name: "Tiktok", url: TIKTOK_URL, iconClass: "fi fi-brands-tik-tok" },
+    {
+      name: "Instagram",
+      url: INSTAGRAM_URL,
+      iconClass: "fi fi-brands-tik-tok",
+    },
+    { name: "Youtube", url: YOUTUBE_URL, iconClass: "fi fi-brands-tik-tok" },
+    { name: "Twitter", url: TWITTER_URL, iconClass: "fi fi-brands-tik-tok" },
+    { name: "Facebook", url: FACEBOOK_URL, iconClass: "fi fi-brands-tik-tok" },
   ];
 
   return (
@@ -45,7 +49,12 @@ export default function Hero() {
                 <div className="text-wood text-center mt-2">
                   Get industry-ready instrumentals to fuel your next track.
                 </div>
-                <div className="mt-4 flex gap-x-5">
+                <div className="mt-5 flex gap-x-5">
+                  {socials.map((social, index) => (
+                    <div key={index}>test</div>
+                  ))}
+                </div>
+                <div className="mt-10 flex gap-x-5">
                   <div>
                     <Link href={socials[0].url} target="_blank">
                       <i className="footerIcon fi fi-brands-tik-tok"></i>
