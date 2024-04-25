@@ -13,7 +13,7 @@ export default function Services() {
         <div className="grid gap-5 grid-cols-1 md:grid-cols-3 mt-5">
           <ServiceItem
             title="Mixing & Mastering"
-            desc="Pro mixing & mastering services to bring your your music to industry-ready polish."
+            desc="Pro mixing & mastering services to bring your your music to an industry-ready track."
             iconClass="fi fi-tr-waveform-path"
             col={{ 
                 border_col: "border-[rgb(247,39,125)]",
