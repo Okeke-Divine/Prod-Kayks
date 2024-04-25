@@ -3,9 +3,15 @@ export default function BeatCard({ title, description, genre, imgUrl }) {
   return (
     <>
       <div className="w-[250px] h-full p-2 rounded-lg border-2 border-white">
-        <div className="w-full h-[200px] bg-blue-200 rounded-lg mb-3 overflow-hidden relative">
-          <img className="absolute object-cover" src={imgUrl} alt={title} />
+        {/* image container */}
+        <div className="w-full h-[220px] bg-blue-200 rounded-lg mb-3 overflow-hidden relative">
+          <img
+            className="absolute inset-0 object-cover w-full h-full"
+            src={imgUrl}
+            alt={title}
+          />
         </div>
+        {/*  */}
         <div>
           <CTag name={genre} />
         </div>

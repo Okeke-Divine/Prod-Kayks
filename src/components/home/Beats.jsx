@@ -17,7 +17,7 @@ export default function Beats() {
       title: "Afro Groove",
       description: "Energetic Burna Boy type beat",
       genre: "Afrobeat",
-      imgUrl: "",
+      imgUrl: "/assets/images/covers/2.jpg",
     },
     {
       title: "Afro Fusion",
