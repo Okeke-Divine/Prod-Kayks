@@ -250,6 +250,7 @@ export default function Beats() {
           <CTag name="Beats" />
         </div>
         <div className="my-5 font-bold text-4xl text-center">Beats</div>
+        <div className="text-center mt-2 text-wood">Your first hit starts here</div>
 
         {/* afro */}
         <div className="mb-5">
