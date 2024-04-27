@@ -4,12 +4,11 @@ import Divider from "../shared/Divider";
 import prisma from "../../db";
 
 async function getGenre() {
-  return await prisma.genre.findMany();
+  return await prisma.genre.findMany({ select: { name: true } });
 }
 
 export default async function Genres() {
   const genres = await getGenre();
-  console.log();
   return (
     <>
       <div className="mainLayout" id="beats">
