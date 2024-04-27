@@ -39,6 +39,9 @@ export default function RootLayout({ children }) {
           <body className={inter.className + ' ' + 'bg-purple-dark text-white '}>
             <Navbar />
             {children}
+            <div>
+              
+            </div>
             <Footer />
           </body>
         </html>

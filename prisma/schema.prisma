@@ -1,0 +1,38 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model email_list{
+  id String @id @default(uuid())
+  email String
+  verified Boolean? @default(false)
+}
+
+model Beat{
+  id String @id @default(uuid())
+  genreId String?
+  name String
+  desc String?
+  thumbnail String?
+  sold Boolean? @default(false)
+  code Int @unique
+  tags String?
+  bpm Int?
+  key String?
+  price Int?
+  mp3_url String?
+  artist String?
+  song String?
+  contract String?
+}
+
+model Genre{
+  id String @id @default(uuid())
+  name String
+  thumbnail_url String?
+}
