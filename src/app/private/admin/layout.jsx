@@ -9,14 +9,14 @@ export default function RootLayout({ children }) {
   return (
     <>
       <div className="block md:flex gap-2">
-        <div className="py-10 px-5">
+        <div className="py-10 px-5 w-fit">
           {urls.map((url, index) => (
             <Link href={url.url}>
               <div className="py-2 px-3 bg-slate-900 rounded mb-2">{url.name}</div>
             </Link>
           ))}
         </div>
-        <div>{children}</div>
+        <div className="w-full">{children}</div>
       </div>
     </>
   );
