@@ -96,11 +96,12 @@ export default async function NewBeat() {
             </div>
             <div className="adminInputContainer">
               <label className="adminInputLabel">Thumbnail</label>
-              <input type="file" name="thumbnail" className="adminInput text-white" />
+              <input type="file" name="thumbnail" className="adminInput text-white" accept="image/*" />
+
             </div>
             <div className="adminInputContainer">
               <label className="adminInputLabel">Mp3</label>
-              <input type="file" name="mp3" className="adminInput text-white" />
+              <input type="file" name="mp3" className="adminInput text-white" accept="audio/mp3" />
             </div>
           </div>
           <div className="adminInputContainer">
