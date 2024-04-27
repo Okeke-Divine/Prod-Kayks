@@ -73,6 +73,16 @@ export default function NewBeat() {
               />
             </div>
             <div className="adminInputContainer">
+              <label className="adminInputLabel">Price (USD)  $</label>
+              <input
+                type="number"
+                name="price"
+                placeholder="Price (USD) $"
+                defaultValue={20}
+                className="adminInput"
+              />
+            </div>
+            <div className="adminInputContainer">
               <label className="adminInputLabel">Thumbnail</label>
               <input type="file" name="thumbnail" className="adminInput" />
             </div>
