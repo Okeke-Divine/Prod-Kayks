@@ -89,6 +89,12 @@
   .adminTableRow{
     @apply text-left p-2;
   }
+  .adminInput{
+    @apply w-full outline-none p-2 rounded;
+  }
+  .adminInputContainer{
+    @apply pb-3;
+  }
 }
 
 /* begin scroll bar style */
