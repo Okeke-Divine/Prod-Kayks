@@ -2,7 +2,7 @@ import prisma from "../../../../db";
 import GenreItem from "../../../../components/admin/genre/GenreItem";
 
 async function getGenres() {
-  return await prisma.genre.findMany({ select: { name: true } });
+  return await prisma.genre.findMany({ select: { name: true, thumbnail_url: true } });
 }
 
 export default async function Genre() {
