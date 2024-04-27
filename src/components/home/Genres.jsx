@@ -13,6 +13,8 @@ export function Genres() {
 
         <div className="mb-5"></div>
       </div>
+      <br />
+      <Divider />
     </>
   );
 }
