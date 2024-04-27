@@ -11,13 +11,13 @@ export default function NewBeat() {
         <form action={createBeat} className="mt-5">
           <div>
             <div className="adminInputContainer">
-              <input name="name" placeholder="Beat name" className="adminInput" />
+              <input type="text" name="name" placeholder="Beat name" className="adminInput" required />
             </div>
             <div className="adminInputContainer">
-              <input name="code" placeholder="Beat code" className="adminInput" />
+              <input type="number" name="code" placeholder="Beat code" className="adminInput" />
             </div>
           </div>
-          <button className="bg-pink py-2 px-5 rounded mt-3">Submit</button>
+          <button className="bg-pink py-2 px-5 rounded mt-1">Submit</button>
         </form>
       </div>
     </>

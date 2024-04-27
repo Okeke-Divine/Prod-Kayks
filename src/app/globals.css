@@ -90,7 +90,7 @@
     @apply text-left p-2;
   }
   .adminInput{
-    @apply w-full outline-none p-2 rounded;
+    @apply w-full outline-none p-2 rounded text-black;
   }
   .adminInputContainer{
     @apply pb-3;
