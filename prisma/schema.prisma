@@ -29,6 +29,9 @@ model Beat{
   artist String?
   song String?
   contract String?
+
+  @@index([name, genreId, desc, bpm, key, price])
+  @@unique([genreId, name])
 }
 
 model Genre{
