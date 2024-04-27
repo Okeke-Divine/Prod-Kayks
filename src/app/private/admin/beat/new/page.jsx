@@ -1,9 +1,18 @@
-export default function NewBeat() {
+import prisma from "../../../../../db";
+
+async function getGenres() {
+  return await prisma.genre.findMany({ select: { name: true, thumbnail_url: true } });
+}
+
+export default async function NewBeat() {
   async function createBeat(data) {
     "use server";
 
     console.log(data);
   }
+
+  const genres = await getGenres({select: {name: true, id: true}});
+
   return (
     <>
       <div className="mainLayout">
@@ -25,6 +34,9 @@ export default function NewBeat() {
                 <option default disabled>
                   Select a Genre
                 </option>
+                {genres.map((genre,index) => (
+                    <option key={index} value={genre.id}>{genre.name}</option>
+                ))}
               </select>
             </div>
             <div className="adminInputContainer">
@@ -73,7 +85,7 @@ export default function NewBeat() {
               />
             </div>
             <div className="adminInputContainer">
-              <label className="adminInputLabel">Price (USD)  $</label>
+              <label className="adminInputLabel">Price (USD) $</label>
               <input
                 type="number"
                 name="price"
@@ -84,12 +96,16 @@ export default function NewBeat() {
             </div>
             <div className="adminInputContainer">
               <label className="adminInputLabel">Thumbnail</label>
-              <input type="file" name="thumbnail" className="adminInput" />
+              <input type="file" name="thumbnail" className="adminInput text-white" />
             </div>
             <div className="adminInputContainer">
               <label className="adminInputLabel">Mp3</label>
-              <input type="file" name="mp3" className="adminInput" />
+              <input type="file" name="mp3" className="adminInput text-white" />
             </div>
+          </div>
+          <div className="adminInputContainer">
+            <input type="checkbox" name="sold" className="mr-2" defaultChecked={false} />
+            <label className="adminInputLabel">Sold</label>
           </div>
           <button className="bg-pink py-2 px-5 rounded mt-1">Submit</button>
         </form>
