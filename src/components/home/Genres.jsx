@@ -1,8 +1,7 @@
-"use client";
 import CTag from "../shared/CTag";
 import Divider from "../shared/Divider";
 
-export function Genres() {
+export default function Genres() {
   return (
     <>
       <div className="mainLayout" id="beats">
