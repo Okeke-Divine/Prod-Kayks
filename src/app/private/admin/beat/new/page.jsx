@@ -30,8 +30,8 @@ export default async function NewBeat() {
             </div>
             <div className="adminInputContainer">
               <label className="adminInputLabel">Select a Genre</label>
-              <select className="adminInput">
-                <option default disabled>
+              <select name="genreId" className="adminInput text-gray-400">
+                <option selected disabled>
                   Select a Genre
                 </option>
                 {genres.map((genre,index) => (
