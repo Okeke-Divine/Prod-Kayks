@@ -1,4 +1,3 @@
-// "use client";
 import Link from "next/link";
 import CTag from "../shared/CTag";
 import Divider from "../shared/Divider";
