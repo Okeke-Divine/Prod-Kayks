@@ -103,7 +103,6 @@ export default async function NewBeat() {
                 name="genreId"
                 className="adminInput text-gray-400"
                 required
-                defaultValue=""
               >
                 <option selected hidden value={""}>
                   Select a Genre

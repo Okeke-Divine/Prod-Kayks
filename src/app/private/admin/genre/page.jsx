@@ -26,18 +26,22 @@ export default async function Genre() {
           </Link>
         </div>
         <table className="table w-full mt-5">
-          <tr>
-            <th className="adminTableRow">S/N</th>
-            <th className="adminTableRow">Name</th>
-            <th className="adminTableRow">Thumbnail URL</th>
-          </tr>
-          {genres.map((genre, index) => (
+          <thead>
             <tr>
-              <th className="adminTableRow">{index + 1}</th>
-              <th className="adminTableRow">{genre.name}</th>
-              <th className="adminTableRow">{genre.thumbnail_url}</th>
+              <th className="adminTableRow">S/N</th>
+              <th className="adminTableRow">Name</th>
+              <th className="adminTableRow">Thumbnail URL</th>
             </tr>
-          ))}
+          </thead>
+          <tbody>
+            {genres.map((genre, index) => (
+              <tr>
+                <td className="adminTableRow">{index + 1}</td>
+                <td className="adminTableRow">{genre.name}</td>
+                <td className="adminTableRow">{genre.thumbnail_url}</td>
+              </tr>
+            ))}
+          </tbody>
         </table>
       </div>
     </>
