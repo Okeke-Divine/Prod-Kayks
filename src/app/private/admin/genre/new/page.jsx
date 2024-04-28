@@ -16,7 +16,7 @@ export default function NewGenre() {
     }
 
     const name = data.get("name");
-    const thumbnail = data.get("thumbnail");
+    // const thumbnail = data.get("thumbnail");
 
     if (typeof name !== "string" || name.length === 0) {
       return;
@@ -62,7 +62,7 @@ export default function NewGenre() {
                 className="adminInput"
               />
             </div>
-            <div className="adminInputContainer">
+            {/* <div className="adminInputContainer">
               <label className="adminInputLabel">Thumbnail</label>
               <input
                 type="file"
@@ -70,7 +70,7 @@ export default function NewGenre() {
                 className="adminInput text-white"
                 accept="image/*"
               />
-            </div>
+            </div> */}
           </div>
           <button className="bg-pink py-2 px-5 rounded mt-1">Submit</button>
         </form>

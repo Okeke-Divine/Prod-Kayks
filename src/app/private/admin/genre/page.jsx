@@ -36,8 +36,8 @@ export default async function Genre() {
             <thead>
               <tr>
                 <th className="adminTableRow">S/N</th>
+                <th className="adminTableRow">Thumbnail</th>
                 <th className="adminTableRow">Name</th>
-                <th className="adminTableRow">Thumbnail URL</th>
                 <th className="adminTableRow">Actions</th>
               </tr>
             </thead>
