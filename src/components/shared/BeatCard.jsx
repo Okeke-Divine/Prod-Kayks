@@ -32,7 +32,7 @@ export default function BeatCard({
           {/* Overlay */}
           <div className="absolute inset-0 flex items-center justify-center">
             <button className="text-white text-3xl">
-              <i className="fi fi-tr-play-circle opacity-10 group-hover:opacity-100 duration-300 text-6xl"></i>
+              <i className="fi fi-tr-play-circle opacity-50 group-hover:opacity-100 duration-300 text-6xl"></i>
             </button>
           </div>
         </div>
