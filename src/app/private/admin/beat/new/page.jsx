@@ -1,8 +1,9 @@
 import prisma from "../../../../../db";
+import { redirect } from "next/navigation";
 
 async function getGenres() {
   return await prisma.genre.findMany({
-    select: { name: true, thumbnail_url: true },
+    select: { name: true, id: true },
   });
 }
 
@@ -22,15 +23,41 @@ export default async function NewBeat() {
 
     const name = data.get("name");
     const genreId = data.get("genreId");
-    const code = data.get("code");
+    const code = parseInt(data.get("code"));
     const desc = data.get("desc");
     const tags = data.get("tags");
-    const bpm = data.get("bpm");
+    const bpm = parseInt(data.get("bpm"));
     const key = data.get("key");
-    const price = data.get("price");
+    const price = parseInt(data.get("price"));
     const thumbnail = data.get("thumbnail");
     const mp3 = data.get("mp3");
     const sold = data.get("sold");
+
+    if (
+      typeof name !== "string" ||
+      name.length === 0 ||
+      typeof genreId !== "string" ||
+      genreId.length === 0 ||
+      code.length === 0
+    ) {
+      return;
+    } else {
+      const beat = await prisma.beat.create({
+        data: {
+          genreId,
+          name,
+          desc,
+          code,
+          tags,
+          bpm,
+          key,
+          price,
+        },
+      });
+      console.log(beat);
+      redirect("/private/admin/beat");
+    }
+
     console.log({
       name,
       genreId,
