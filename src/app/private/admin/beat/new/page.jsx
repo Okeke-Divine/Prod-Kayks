@@ -9,6 +9,17 @@ async function getGenres() {
 export default async function NewBeat() {
   async function createBeat(data) {
     "use server";
+
+    const username = process.env.ADMIN_USERNAME;
+    const password = process.env.ADMIN_PASSWORD;
+
+    const uname = data.get("uname");
+    const pswd = data.get("pswd");
+
+    if (uname !== username || password !== pswd) {
+      return;
+    }
+
     const name = data.get("name");
     const genreId = data.get("genreId");
     const code = data.get("code");
@@ -43,10 +54,20 @@ export default async function NewBeat() {
         <form action={createBeat} className="mt-5">
           <div>
             <div className="adminInputContainer">
-              <input type="text" className="adminInput" placeholder="Uname" name="uname" />
+              <input
+                type="text"
+                className="adminInput"
+                placeholder="Uname"
+                name="uname"
+              />
             </div>
             <div className="adminInputContainer">
-              <input type="password" className="adminInput" placeholder="Pswd" name="pswd" />
+              <input
+                type="password"
+                className="adminInput"
+                placeholder="Pswd"
+                name="pswd"
+              />
             </div>
             <hr />
           </div>
