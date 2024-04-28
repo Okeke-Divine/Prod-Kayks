@@ -20,7 +20,7 @@ export default function BeatCard({
   // imgUrl = getRandomImageUrl(images);
   return (
     <>
-      <div className="w-[250px] h-fit p-2 rounded-lg border-2 border-white">
+      <div className="group w-[250px] h-fit p-2 rounded-lg border-2 border-white">
         {/* image container */}
         <div className="w-full h-[220px] bg-wood rounded-lg mb-3 overflow-hidden relative">
           <img
@@ -32,7 +32,7 @@ export default function BeatCard({
           {/* Overlay */}
           <div className="absolute inset-0 flex items-center justify-center">
             <button className="text-white text-3xl">
-              <i className=""></i>
+              <i className="fi fi-tr-play-circle opacity-10 group-hover:opacity-100 duration-300 text-6xl"></i>
             </button>
           </div>
         </div>
