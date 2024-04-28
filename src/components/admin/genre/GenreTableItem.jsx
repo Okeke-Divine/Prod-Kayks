@@ -1,10 +1,16 @@
 "use client";
-
 export default function GenreTableItem({ genre, index, deleteGenre }) {
   function prepareDelete(id) {
-    console.log(document.getElementById(id));
-    deleteGenre(id);
+    const confirmed = confirm(
+      "Are you sure you want to delete this genre? This action cannot be undone."
+    );
+
+    if (confirmed) {
+      document.getElementById(id).style.display = "none";
+      deleteGenre(id);
+    }
   }
+
   return (
     <>
       <tr id={genre.id}>

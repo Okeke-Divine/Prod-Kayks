@@ -1,5 +1,6 @@
 import Link from "next/link";
 import prisma from "../../../../db";
+import { redirect } from "next/navigation";
 import GenreTableItem from "../../../../components/admin/genre/GenreTableItem";
 
 async function getGenres() {
@@ -10,7 +11,9 @@ async function getGenres() {
 
 async function deleteGenre(id) {
   "use server";
+
   console.log("delete", id);
+  redirect("/private/admin/genre");
 }
 
 export default async function Genre() {

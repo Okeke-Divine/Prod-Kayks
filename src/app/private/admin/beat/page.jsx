@@ -1,12 +1,13 @@
 import Link from "next/link";
-import prisma from "../../../../db"
+import prisma from "../../../../db";
+import BeatTableItem from "../../../../components/admin/beat/BeatTableItem"
 
-async function getBeats(){
+async function getBeats() {
   return await prisma.beat.findMany();
 }
 
 export default async function Beats() {
-  const beats = await getBeats()
+  const beats = await getBeats();
 
   return (
     <>
@@ -21,36 +22,27 @@ export default async function Beats() {
           </Link>
         </div>
         <div>
-         <div className="overflow-x-auto w-full">
-         <table className="table w-full mt-5">
-            <thead>
-            <tr>
-              <th className="adminTableRow">S/N</th>
-              <th className="adminTableRow">Name</th>
-              <th className="adminTableRow">Bpm</th>
-              <th className="adminTableRow">Key</th>
-              <th className="adminTableRow">Price</th>
-              <th className="adminTableRow">Sold</th>
-              <th className="adminTableRow">Code</th>
-              <th className="adminTableRow">Action</th>
-            </tr>
-            </thead>
-           <tbody>
-           {beats.map((beat,index) => (
-              <tr key={index}>
-              <td className="adminTableRow">{(index+1)}</td>
-              <td className="adminTableRow">{beat.name}</td>
-              <td className="adminTableRow">{beat.bpm}</td>
-              <td className="adminTableRow">{beat.key}</td>
-              <td className="adminTableRow">{beat.price}</td>
-              <td className="adminTableRow">{beat.sold}</td>
-              <td className="adminTableRow">{beat.code}</td>
-              <td className="adminTableRow"><Link href={`/private/admin/beat/[${beat.id}]/view`}>View</Link></td>
-              </tr>
-            ))}
-           </tbody>
-          </table>
-         </div>
+          <div className="overflow-x-auto w-full">
+            <table className="table w-full mt-5">
+              <thead>
+                <tr>
+                  <th className="adminTableRow">S/N</th>
+                  <th className="adminTableRow">Name</th>
+                  <th className="adminTableRow">Bpm</th>
+                  <th className="adminTableRow">Key</th>
+                  <th className="adminTableRow">Price</th>
+                  <th className="adminTableRow">Sold</th>
+                  <th className="adminTableRow">Code</th>
+                  <th className="adminTableRow">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                {beats.map((beat, index) => (
+                  <BeatTableItem beat={beat} index={index} key={index} />
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </>
