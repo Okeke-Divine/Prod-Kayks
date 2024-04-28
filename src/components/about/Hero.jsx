@@ -42,6 +42,9 @@ export default function Hero() {
           <div className="block md:flex items-center justify-center gap-x-5">
             <div className="w-full md:w-full flex justify-center">
               <div className="w-fit">
+                <div className="flex justify-center items-center">
+                  <img alt="Prod. Kayks" src="/assets/images/prod-kayks.jpg" className="rounded-full w-[100px] h-[100px] border-2 border-wood" />
+                </div>
                 <div className="mt-3 text-4xl font-bold text-center">
                   Prod. Kayks
                 </div>
