@@ -24,7 +24,10 @@ export default async function BeatsByGenre({ genre }) {
                 title={beat.name}
                 description={beat.desc}
                 genre={genre.name}
-                imgUrl={beat.thumbnail}
+                thumbnail={beat.thumbnail}
+                bpm={beat.bpm}
+                key={beat.key}
+                price={beat.price}
               />
             </div>
           ))}

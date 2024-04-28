@@ -6,18 +6,16 @@ export default function BeatCard({
   title,
   description,
   genre,
-  imgUrl,
+  thumbnail,
+  bpm,
+  key,
+  price,
 }) {
-  // bpm,
-  // key,
-  // price,
-  // beatUrl,
-  // beatDownloadUrl,
   // const images = ["/assets/images/covers/1.jpg", "/assets/images/covers/2.jpg"];
 
   // function getRandomImageUrl(images) {
-    // const randomIndex = Math.floor(Math.random() * images.length);
-    // return images[randomIndex];
+  // const randomIndex = Math.floor(Math.random() * images.length);
+  // return images[randomIndex];
   // }
   // imgUrl = getRandomImageUrl(images);
   return (
@@ -27,7 +25,7 @@ export default function BeatCard({
         <div className="w-full h-[220px] bg-wood rounded-lg mb-3 overflow-hidden relative">
           <img
             className="absolute inset-0 object-cover w-full h-full"
-            src={imgUrl}
+            src={thumbnail}
             alt={title}
           />
         </div>
