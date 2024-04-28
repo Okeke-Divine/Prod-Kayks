@@ -5,13 +5,34 @@ import Link from "next/link";
 import prisma from "../../db";
 
 async function getGenre() {
-  return await prisma.genre.findMany({
-    select: { name: true, thumbnail_url: true, id: true },
+  const genres = await prisma.genre.findMany({
+    select: {
+      id: true,
+      name: true,
+      thumbnail_url: true,
+    }
   });
+  
+  // Get the count of beats for each genre
+  const genresWithBeatCounts = await Promise.all(genres.map(async genre => {
+    const beatCount = await prisma.beat.count({
+      where: {
+        genreId: genre.id
+      }
+    });
+  
+    return {
+      ...genre,
+      beatCount
+    };
+  }));
+  
+  return genresWithBeatCounts;
 }
 
 export default async function Genres() {
   const genres = await getGenre();
+  console.log(genres);
   return (
     <>
       <div className="mainLayout" id="beats">
@@ -46,7 +67,7 @@ export default async function Genres() {
                       <div className="text-white text-center text-3xl font-bold">
                         {genre.name}
                       </div>
-                      <div className="text-center text-wood">30+ beats</div>
+                      <div className="text-center text-wood">{genre.beatCount} beat(s)</div>
                     </div>
                   </div>
                 </div>
