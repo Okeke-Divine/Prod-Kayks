@@ -4,11 +4,12 @@ import Divider from "../shared/Divider";
 import prisma from "../../db";
 
 async function getGenre() {
-  return await prisma.genre.findMany({ select: { name: true } });
+  return await prisma.genre.findMany({ select: { name: true, thumbnail_url: true } });
 }
 
 export default async function Genres() {
   const genres = await getGenre();
+  console.log(genres);
   return (
     <>
       <div className="mainLayout" id="beats">
@@ -16,7 +17,7 @@ export default async function Genres() {
           <CTag name="Genres" />
         </div>
         <div className="mt-5 font-bold text-4xl text-center">Genres</div>
-        <div className="my-5 grid grid-cols-1 md:grid-cols-4 gap-2">
+        <div className="my-5 grid grid-cols-1 md:grid-cols-2 gap-2">
           {genres.map((genre, index) => (
             <div
               key={index}
@@ -25,12 +26,12 @@ export default async function Genres() {
               {/*  */}
               <div className="relative w-full">
                 {/* Image container */}
-                <div className="bg-wood w-full h-[150px] rounded overflow-hidden">
+                <div className="bg-wood w-full h-[300px] rounded overflow-hidden">
                   {/* Image */}
                   <img
                     className="object-cover w-full h-full"
                     alt={genre.name}
-                    src={`/assets/images/genres/popsmoke.jpg`}
+                    src={genre.thumbnail_url}
                   />
                   {/* Black overlay */}
                   <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -38,7 +39,7 @@ export default async function Genres() {
 
                 {/* Text */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-white text-center">{genre.name}</div>
+                  <div className="text-white text-center text-xl">{genre.name}</div>
                 </div>
               </div>
               {/*  */}
