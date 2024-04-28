@@ -9,7 +9,6 @@ async function getGenre() {
 
 export default async function Genres() {
   const genres = await getGenre();
-  console.log(genres);
   return (
     <>
       <div className="mainLayout" id="beats">
@@ -39,7 +38,7 @@ export default async function Genres() {
 
                 {/* Text */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-white text-center text-xl">{genre.name}</div>
+                  <div className="text-white text-center text-3xl font-bold">{genre.name}</div>
                 </div>
               </div>
               {/*  */}
