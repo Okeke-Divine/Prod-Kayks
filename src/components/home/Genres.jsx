@@ -32,7 +32,7 @@ async function getGenre() {
 
 export default async function Genres() {
   const genres = await getGenre();
-  console.log(genres);
+
   return (
     <>
       <div className="mainLayout" id="beats">
