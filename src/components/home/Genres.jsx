@@ -22,12 +22,26 @@ export default async function Genres() {
               key={index}
               className="rounded flex justify-center items-center border-2 border-[rgb(255,215,128)] cursor-pointer"
             >
-              <div className="w-full">
-                <div className="bg-wood w-full h-[150px] rounded">
-                  {/* image container */}
+              {/*  */}
+              <div className="relative w-full">
+                {/* Image container */}
+                <div className="bg-wood w-full h-[150px] rounded overflow-hidden">
+                  {/* Image */}
+                  <img
+                    className="object-cover w-full h-full"
+                    alt={genre.name}
+                    src={`/assets/images/genres/popsmoke.jpg`}
+                  />
+                  {/* Black overlay */}
+                  <div className="absolute inset-0 bg-black opacity-50"></div>
                 </div>
-                <div className="p-1">{genre.name}</div>
+
+                {/* Text */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-white text-center">{genre.name}</div>
+                </div>
               </div>
+              {/*  */}
             </div>
           ))}
         </div>
