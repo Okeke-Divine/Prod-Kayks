@@ -32,6 +32,7 @@ export default async function Beats() {
               <th className="adminTableRow">Price</th>
               <th className="adminTableRow">Sold</th>
               <th className="adminTableRow">Code</th>
+              <th className="adminTableRow">Action</th>
             </tr>
             </thead>
            <tbody>
@@ -44,6 +45,7 @@ export default async function Beats() {
               <td className="adminTableRow">{beat.price}</td>
               <td className="adminTableRow">{beat.sold}</td>
               <td className="adminTableRow">{beat.code}</td>
+              <td className="adminTableRow"><Link href={`/private/admin/beat/[${beat.id}]/view`}>View</Link></td>
               </tr>
             ))}
            </tbody>
