@@ -15,7 +15,7 @@ export default async function BeatsByGenre({ genre }) {
 
   return (
     <>
-      <div className="mb-5">
+      <div className={`mb-5 ${(beats.length === 0 ? 'hidden' : 'block')}`} id={genre.id}>
         <ComponentTitle name={genre.name} url={`/beats/?genre=${genre.name}`} />
         <div className="beatFlex">
           {beats.map((beat, index) => (
