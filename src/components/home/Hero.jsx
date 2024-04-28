@@ -37,8 +37,8 @@ export default function Hero() {
                 >
                   Bluenax Productions
                 </Link>{" "}
-                (Tega Boi DC, Edo Zamani, Kenzo Ik, Endeetone, Datboi Smee). Get
-                industry-ready instrumentals to fuel your next track.
+                (Tega Boi DC, Edo Zamani, Kenzo Ik, Endeetone, Datboi Smee). <span className="text-white">Get
+                industry-ready instrumentals to fuel your next track.</span>
               </div>
               <div className="flex flex-wrap gap-5 items-center mt-10">
                 <Link href="/#services">
