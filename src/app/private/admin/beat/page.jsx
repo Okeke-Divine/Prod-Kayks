@@ -1,6 +1,13 @@
 import Link from "next/link";
+import prisma from "../../../../db"
 
-export default function Beats() {
+async function getBeats(){
+  return await prisma.beat.findMany();
+}
+
+export default async function Beats() {
+  const beats = await getBeats()
+
   return (
     <>
       <div className="mainLayout">
@@ -12,6 +19,24 @@ export default function Beats() {
           >
             New
           </Link>
+        </div>
+        <div>
+          <table className="table w-full mt-5">
+            <tr>
+              <th className="adminTableRow">S/N</th>
+              <th className="adminTableRow">Name</th>
+              <th className="adminTableRow">Bpm</th>
+              <th className="adminTableRow">Key</th>
+              <th className="adminTableRow">Price</th>
+              <th className="adminTableRow">Sold</th>
+              <th className="adminTableRow">Code</th>
+            </tr>
+            {beats.map((beat,index) => (
+              <tr key={index}>
+              <th className="adminTableRow">2</th>
+              </tr>
+            ))}
+          </table>
         </div>
       </div>
     </>
