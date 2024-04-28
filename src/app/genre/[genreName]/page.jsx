@@ -1,7 +1,8 @@
-export default function ViewGenre(){
+export default function ViewGenre({params}){
+    const genreName = params.genreName;
     return (
         <>
-        <div>view genre</div>
+        <div className="mainLayout">{genreName}</div>
         </>
     )
 }
