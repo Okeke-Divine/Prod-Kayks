@@ -1,10 +1,10 @@
 import Link from "next/link";
 import prisma from "../../../../db";
-import GenreTableItem from "../../../../components/admin/genre/GenreTableItem"
+import GenreTableItem from "../../../../components/admin/genre/GenreTableItem";
 
 async function getGenres() {
   return await prisma.genre.findMany({
-    select: { name: true, thumbnail_url: true },
+    select: { name: true, id: true, thumbnail_url: true },
   });
 }
 
@@ -14,9 +14,7 @@ async function deleteGenre(id) {
 }
 
 export default async function Genre() {
-  const genres = await getGenres({
-    select: { name: true, thumbnail_url: true },
-  });
+  const genres = await getGenres();
 
   return (
     <>
@@ -42,7 +40,12 @@ export default async function Genre() {
             </thead>
             <tbody>
               {genres.map((genre, index) => (
-                <GenreTableItem genre={genre} index={index} deleteGenre={deleteGenre} key={index} />
+                <GenreTableItem
+                  genre={genre}
+                  index={index}
+                  deleteGenre={deleteGenre}
+                  key={index}
+                />
               ))}
             </tbody>
           </table>

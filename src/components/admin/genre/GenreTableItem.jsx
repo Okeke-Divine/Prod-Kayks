@@ -2,7 +2,7 @@
 
 export default function GenreTableItem({ genre, index, deleteGenre }) {
   function prepareDelete(id) {
-    console.log(null);
+    console.log(document.getElementById(id));
     deleteGenre(id);
   }
   return (
