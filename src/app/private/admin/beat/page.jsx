@@ -22,6 +22,7 @@ export default async function Beats() {
         </div>
         <div>
           <table className="table w-full mt-5">
+            <thead>
             <tr>
               <th className="adminTableRow">S/N</th>
               <th className="adminTableRow">Name</th>
@@ -31,11 +32,20 @@ export default async function Beats() {
               <th className="adminTableRow">Sold</th>
               <th className="adminTableRow">Code</th>
             </tr>
-            {beats.map((beat,index) => (
+            </thead>
+           <tbody>
+           {beats.map((beat,index) => (
               <tr key={index}>
-              <th className="adminTableRow">2</th>
+              <td className="adminTableRow">{(index+1)}</td>
+              <td className="adminTableRow">{beat.name}</td>
+              <td className="adminTableRow">{beat.bpm}</td>
+              <td className="adminTableRow">{beat.key}</td>
+              <td className="adminTableRow">{beat.price}</td>
+              <td className="adminTableRow">{beat.sold}</td>
+              <td className="adminTableRow">{beat.code}</td>
               </tr>
             ))}
+           </tbody>
           </table>
         </div>
       </div>
