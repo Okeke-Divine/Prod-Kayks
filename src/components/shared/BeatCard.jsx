@@ -28,7 +28,15 @@ export default function BeatCard({
             src={thumbnail}
             alt={title}
           />
+          <div className="absolute inset-0 bg-black opacity-50"></div>{" "}
+          {/* Overlay */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <button className="text-white text-3xl">
+              <i className=""></i>
+            </button>
+          </div>
         </div>
+
         {/*  */}
         <div>
           <CTag name={genre} />
