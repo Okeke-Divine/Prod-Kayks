@@ -26,7 +26,7 @@ export default async function BeatsByGenre({ genre }) {
                 genre={genre.name}
                 thumbnail={beat.thumbnail}
                 bpm={beat.bpm}
-                key={beat.key}
+                beatKey={beat.key}
                 price={beat.price}
               />
             </div>

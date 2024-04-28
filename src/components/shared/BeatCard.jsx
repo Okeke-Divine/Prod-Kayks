@@ -4,11 +4,11 @@ import Divider from "../shared/Divider";
 
 export default function BeatCard({
   title,
-  description,
+  desc,
   genre,
   thumbnail,
   bpm,
-  key,
+  beatKey,
   price,
 }) {
   // const images = ["/assets/images/covers/1.jpg", "/assets/images/covers/2.jpg"];
@@ -26,7 +26,7 @@ export default function BeatCard({
           <img
             className="absolute inset-0 object-cover w-full h-full"
             src={thumbnail}
-            alt={title}
+            alt={title+" - "+desc}
           />
           <div className="absolute inset-0 bg-black opacity-50"></div>{" "}
           {/* Overlay */}
@@ -43,7 +43,7 @@ export default function BeatCard({
         </div>
         <div className="font-bold mt-1">{title}</div>
         <div className="text-gray-400 break-words text-wrap w-[250px]">
-          {description}
+          {desc}
         </div>
         <div className="py-2">
           <Divider />
@@ -53,7 +53,7 @@ export default function BeatCard({
           <Seperator />
           <div>{bpm} BPM</div>
           <Seperator />
-          <div>{key}</div>
+          <div>{beatKey}</div>
         </div>
         <div className="py-2">
           <Divider />
