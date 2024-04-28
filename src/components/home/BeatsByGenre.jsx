@@ -22,7 +22,7 @@ export default async function BeatsByGenre({ genre }) {
             <div key={index}>
               <BeatCard
                 title={beat.name}
-                description={beat.desc}
+                desc={beat.desc}
                 genre={genre.name}
                 thumbnail={beat.thumbnail}
                 bpm={beat.bpm}
