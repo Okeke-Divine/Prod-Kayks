@@ -51,9 +51,9 @@ export default function Hero() {
                 <div className="text-gray-400 text-center mt-2">
                   Multi-Genre Music Producer/Audio Enginner
                 </div>
-                <div className="text-wood text-center mt-2">
+                {/* <div className="text-wood text-center mt-2">
                   Get industry-ready instrumentals to fuel your next track.
-                </div>
+                </div> */}
                 <div className="mt-5 flex justify-center gap-x-5">
                   {socials.map((social, index) => (
                     <Link key={index} href={social.url} target={"_blank"}>
