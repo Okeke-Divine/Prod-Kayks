@@ -48,7 +48,9 @@ export default function NewGenre() {
                 name="pswd"
               />
             </div>
-            <hr />
+            <div className="py-5 px-10">
+              <hr />
+            </div>
           </div>
           <div>
             <div className="adminInputContainer">
