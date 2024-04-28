@@ -41,11 +41,11 @@ export default function BeatCard({
           <Divider />
         </div>
         <div className="flex flex-wrap gap-2 text-gray-400 text-sm">
-          <div className="text-wood">$19</div>
+          <div className="text-wood">${price}</div>
           <Seperator />
-          <div>127 BPM</div>
+          <div>{bpm} BPM</div>
           <Seperator />
-          <div>C# Maj</div>
+          <div>{key}</div>
         </div>
         <div className="py-2">
           <Divider />
