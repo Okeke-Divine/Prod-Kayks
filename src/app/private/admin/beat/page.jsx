@@ -21,7 +21,8 @@ export default async function Beats() {
           </Link>
         </div>
         <div>
-          <table className="table w-full mt-5">
+         <div className="overflow-x-auto w-full">
+         <table className="table w-full mt-5">
             <thead>
             <tr>
               <th className="adminTableRow">S/N</th>
@@ -47,6 +48,7 @@ export default async function Beats() {
             ))}
            </tbody>
           </table>
+         </div>
         </div>
       </div>
     </>
