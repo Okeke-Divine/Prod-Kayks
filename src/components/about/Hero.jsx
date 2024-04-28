@@ -49,7 +49,7 @@ export default function Hero() {
                   Prod. Kayks
                 </div>
                 <div className="text-gray-400 text-center mt-2">
-                  Music Producer
+                  Multi-Genre Music Producer/Audio Enginner
                 </div>
                 <div className="text-wood text-center mt-2">
                   Get industry-ready instrumentals to fuel your next track.
