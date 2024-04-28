@@ -18,11 +18,6 @@ export default async function Genre() {
     select: { name: true, thumbnail_url: true },
   });
 
-  function prepareDelete(id) {
-    document.getElementById(id).style.display = "none";
-    deleteGenre(id);
-  }
-
   return (
     <>
       <div className="mainLayout">
@@ -47,7 +42,7 @@ export default async function Genre() {
             </thead>
             <tbody>
               {genres.map((genre, index) => (
-                <GenreTableItem genre={genre} index={index} key={index} />
+                <GenreTableItem genre={genre} index={index} deleteGenre={deleteGenre} key={index} />
               ))}
             </tbody>
           </table>

@@ -1,4 +1,10 @@
-export default function GenreTableItem({genre, index}) {
+"use client";
+
+export default function GenreTableItem({ genre, index, deleteGenre }) {
+  function prepareDelete(id) {
+    console.log(null);
+    deleteGenre(id);
+  }
   return (
     <>
       <tr id={genre.id}>
@@ -6,7 +12,7 @@ export default function GenreTableItem({genre, index}) {
         <td className="adminTableRow">{genre.name}</td>
         <td className="adminTableRow">{genre.thumbnail_url}</td>
         <td className="adminTableRow text-pink flex gap-2 flex-wrap">
-          <button onClick={() => prepareDelete(id)}>[x]</button>
+          <button onClick={() => prepareDelete(genre.id)}>[x]</button>
           <button>[edit]</button>
         </td>
       </tr>
