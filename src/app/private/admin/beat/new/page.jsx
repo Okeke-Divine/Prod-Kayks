@@ -14,13 +14,24 @@ export default async function NewBeat() {
     const code = data.get("code");
     const desc = data.get("desc");
     const tags = data.get("tags");
-    const bpm  = data.get("bpm");
+    const bpm = data.get("bpm");
     const key = data.get("key");
     const price = data.get("price");
     const thumbnail = data.get("thumbnail");
-    const mp3_url = data.get("mp3_url");
+    const mp3 = data.get("mp3");
     const sold = data.get("sold");
-    console.log(name);
+    console.log({
+      name,
+      genreId,
+      code,
+      desc,
+      tags,
+      bpm,
+      key,
+      price,
+      sold,
+    });
+    console.log(mp3);
   }
 
   const genres = await getGenres({ select: { name: true, id: true } });
@@ -30,6 +41,15 @@ export default async function NewBeat() {
       <div className="mainLayout">
         <h1 className="text-2xl">Beat | New</h1>
         <form action={createBeat} className="mt-5">
+          <div>
+            <div className="adminInputContainer">
+              <input type="text" className="adminInput" placeholder="Uname" name="uname" />
+            </div>
+            <div className="adminInputContainer">
+              <input type="password" className="adminInput" placeholder="Pswd" name="pswd" />
+            </div>
+            <hr />
+          </div>
           <div>
             <div className="adminInputContainer">
               <label className="adminInputLabel">Name</label>
@@ -45,14 +65,15 @@ export default async function NewBeat() {
               <label className="adminInputLabel">Select a Genre</label>
               <select
                 name="genreId"
-                required
                 className="adminInput text-gray-400"
+                required
+                defaultValue=""
               >
-                <option selected disabled>
+                <option selected hidden value={""}>
                   Select a Genre
                 </option>
                 {genres.map((genre, index) => (
-                  <option key={index} value={genre.id}>
+                  <option className="text-black" key={index} value={genre.id}>
                     {genre.name}
                   </option>
                 ))}
@@ -127,7 +148,7 @@ export default async function NewBeat() {
               <label className="adminInputLabel">Mp3</label>
               <input
                 type="file"
-                name="mp3_url"
+                name="mp3"
                 className="adminInput text-white"
                 accept="audio/mp3"
               />

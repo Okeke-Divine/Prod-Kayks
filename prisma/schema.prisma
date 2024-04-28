@@ -36,6 +36,7 @@ model Beat {
   @@index([desc])
   @@index([bpm])
   @@index([key])
+  @@index([tags])
   @@index([price])
 }
 
