@@ -15,7 +15,8 @@ model email_list {
 
 model Beat {
   id        String   @id @default(uuid())
-  genreId   String?
+  genre     Genre?   @relation(fields: [genreId], references: [id])
+  genreId   String
   name      String
   desc      String?
   thumbnail String?
@@ -44,4 +45,5 @@ model Genre {
   id            String  @id @default(uuid())
   name          String
   thumbnail_url String?
+  beats         Beat[]
 }
