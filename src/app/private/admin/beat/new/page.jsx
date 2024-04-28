@@ -42,7 +42,7 @@ export default async function NewBeat() {
     ) {
       return;
     } else {
-      const beat = await prisma.beat.create({
+      await prisma.beat.create({
         data: {
           genreId,
           name,
@@ -54,22 +54,8 @@ export default async function NewBeat() {
           price,
         },
       });
-      console.log(beat);
       redirect("/private/admin/beat");
     }
-
-    console.log({
-      name,
-      genreId,
-      code,
-      desc,
-      tags,
-      bpm,
-      key,
-      price,
-      sold,
-    });
-    console.log(mp3);
   }
 
   const genres = await getGenres({ select: { name: true, id: true } });
