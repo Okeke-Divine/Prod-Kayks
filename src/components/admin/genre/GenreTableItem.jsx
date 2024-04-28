@@ -1,4 +1,4 @@
-export default function GenreTableItem({genre}) {
+export default function GenreTableItem({genre, index}) {
   return (
     <>
       <tr id={genre.id}>
