@@ -1,13 +1,19 @@
-'use client'
-import { useState } from "react";
-import Link from "next/link";
+"use client";
 import CTag from "../shared/CTag";
 import Seperator from "../shared/Seperator";
 import Divider from "../shared/Divider";
+import Swal from "sweetalert2";
 
-const download_msg = "Purchase a license to use the beat in your music. Feel free to use this beat on TikTok or IG any other platform! Just be sure to tag/credit me (@prod.kayks). :)";
+const download_msg =
+  "Purchase a license to use the beat in your music. Feel free to use this beat on TikTok or IG any other platform! Just be sure to tag/credit me (@prod.kayks)";
 
 async function downloadFile(url, filename) {
+  Swal.fire({
+    title: "Beat Usage Information",
+    html: download_msg,
+    icon: "info",
+  });
+
   try {
     const response = await fetch(url);
     if (!response.ok) {
@@ -15,16 +21,15 @@ async function downloadFile(url, filename) {
     }
     const blob = await response.blob();
     const fileUrl = window.URL.createObjectURL(blob);
-    const link = document.createElement('a');
+    const link = document.createElement("a");
     link.href = fileUrl;
-    link.setAttribute('download', filename);
+    link.setAttribute("download", filename);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   } catch (error) {
-    console.error('Download error:', error);
+    console.error("Download error:", error);
   }
-
 }
 
 export default function BeatCard({
@@ -63,7 +68,10 @@ export default function BeatCard({
         <div>
           <CTag name={genre} />
         </div>
-        <div className="font-bold mt-1">{(sold === true) ? '[SOLD] ' : ''}{title}</div>
+        <div className="font-bold mt-1">
+          {sold === true ? "[SOLD] " : ""}
+          {title}
+        </div>
         <div className="text-gray-400 break-words text-wrap w-[250px]">
           {desc}
         </div>
@@ -86,11 +94,17 @@ export default function BeatCard({
           </button>
           {free_download === true ? (
             // <Link href={mp3_url} target="_blank" download>
-              <button onClick={() => downloadFile(mp3_url, title+' - Prod. Kayks.mp3')} className="bg-purple-dark-2 text-white py-2 px-3 text-sm rounded-lg cursor-pointer">
-                Free Download
-              </button>
-            // </Link>
+            <button
+            title={download_msg}
+              onClick={() =>
+                downloadFile(mp3_url, title + " - Prod. Kayks.mp3")
+              }
+              className="bg-purple-dark-2 text-white py-2 px-3 text-sm rounded-lg cursor-pointer"
+            >
+              Free Download
+            </button>
           ) : (
+            // </Link>
             <>
               <div></div>
             </>
