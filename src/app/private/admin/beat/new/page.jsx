@@ -36,8 +36,6 @@ export default async function NewBeat() {
       sold = sold === null ? false : true;
       free_download = free_downloadgt === null ? false : true;
 
-      console.log(sold, free_download);
-
       if (
         typeof name !== "string" ||
         name.length === 0 ||
@@ -47,7 +45,6 @@ export default async function NewBeat() {
       ) {
         return;
       } else {
-        return;
         await prisma.beat.create({
           data: {
             genreId,
@@ -185,7 +182,7 @@ export default async function NewBeat() {
               <input
                 type="text"
                 name="thumbnail"
-                className="adminInput text-white"
+                className="adminInput"
                 accept="image/*"
               />
             </div>
@@ -194,7 +191,7 @@ export default async function NewBeat() {
               <input
                 type="text"
                 name="mp3_url"
-                className="adminInput text-white"
+                className="adminInput"
                 accept="audio/mp3"
               />
             </div>
