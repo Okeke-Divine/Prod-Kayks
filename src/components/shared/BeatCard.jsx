@@ -2,7 +2,6 @@ import CTag from "../shared/CTag";
 import Seperator from "../shared/Seperator";
 import Divider from "../shared/Divider";
 
-
 export default function BeatCard({
   title,
   desc,
@@ -13,15 +12,9 @@ export default function BeatCard({
   price,
   sold,
   free_download,
-  mp3_url
+  mp3_url,
 }) {
-  // const images = ["/assets/images/covers/1.jpg", "/assets/images/covers/2.jpg"];
-
-  // function getRandomImageUrl(images) {
-  // const randomIndex = Math.floor(Math.random() * images.length);
-  // return images[randomIndex];
-  // }
-  // imgUrl = getRandomImageUrl(images);
+  console.log(free_download);
   return (
     <>
       <div className="group w-[250px] h-fit p-2 rounded-lg border-2 border-white">
@@ -30,7 +23,7 @@ export default function BeatCard({
           <img
             className="absolute inset-0 object-cover w-full h-full"
             src={thumbnail}
-            alt={title+" - "+desc}
+            alt={title + " - " + desc}
           />
           <div className="absolute inset-0 bg-black opacity-50"></div>{" "}
           {/* Overlay */}
@@ -62,13 +55,17 @@ export default function BeatCard({
         <div className="py-2">
           <Divider />
         </div>
-        <div className="flex flex-wrap gap-2 py-2">
+        <div className="flex flex-wrap gap-2 py-2 justify-center">
           <button className="bg-pink text-white py-2 px-3 text-sm rounded-lg cursor-pointer">
             Buy
           </button>
-          <button className="bg-purple-dark-2 text-white py-2 px-3 text-sm rounded-lg cursor-pointer">
-            Free Download
-          </button>
+          {free_download === true ? (
+            <button className="bg-purple-dark-2 text-white py-2 px-3 text-sm rounded-lg cursor-pointer">
+              Free Download
+            </button>
+          ) : (
+            <><div></div></>
+          )}
         </div>
       </div>
     </>
