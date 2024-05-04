@@ -1,4 +1,4 @@
-import Link from "next/link";
+// import Link from "next/link";
 
 export default function ComponentTitle({name, url}) {
   return (
@@ -6,9 +6,9 @@ export default function ComponentTitle({name, url}) {
       <div className="flex justify-between items-center mb-2">
         <div className="font-bold text-2xl">{name}</div>
         <div>
-          <Link className="text-wood" href={url}>
+          {/* <Link className="text-wood" href={url}>
             See All
-          </Link>
+          </Link> */}
         </div>
       </div>{" "}
     </>

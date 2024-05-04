@@ -63,7 +63,7 @@ export default function BeatCard({
             Buy
           </button>
           {free_download === true ? (
-            <Link href={mp3_url} download={mp3_url}>
+            <Link href={mp3_url} target="_blank" download>
               <button className="bg-purple-dark-2 text-white py-2 px-3 text-sm rounded-lg cursor-pointer">
                 Free Download
               </button>
