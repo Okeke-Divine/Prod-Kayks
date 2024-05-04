@@ -95,6 +95,9 @@
   .adminInputContainer{
     @apply pb-3;
   }
+  .playerIcon{
+    @apply text-xl text-[rgb(255,215,128)];
+  }
 }
 
 /* begin scroll bar style */
