@@ -29,8 +29,14 @@ export default async function NewBeat() {
       const key = data.get("key");
       const price = parseInt(data.get("price"));
       const thumbnail = data.get("thumbnail");
-      const mp3 = data.get("mp3");
-      const sold = data.get("sold");
+      const mp3_url = data.get("mp3_url");
+      let sold = data.get("sold");
+      let free_download = data.get("free_download");
+
+      sold = sold === null ? false : true;
+      free_download = free_downloadgt === null ? false : true;
+
+      console.log(sold, free_download);
 
       if (
         typeof name !== "string" ||
@@ -41,6 +47,7 @@ export default async function NewBeat() {
       ) {
         return;
       } else {
+        return;
         await prisma.beat.create({
           data: {
             genreId,
@@ -51,6 +58,8 @@ export default async function NewBeat() {
             bpm,
             key,
             price,
+            thumbnail,
+            mp3_url,
           },
         });
         redirect("/private/admin/beat");
