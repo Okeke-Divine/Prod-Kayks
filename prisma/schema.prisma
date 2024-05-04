@@ -30,7 +30,7 @@ model Beat {
   artist    String?
   song      String?
   contract  String?
-  free_download Boolean?
+  free_download Boolean? @default(true)
   fall_back_thumbnail String?
   fall_back_mp3_url String?
 
