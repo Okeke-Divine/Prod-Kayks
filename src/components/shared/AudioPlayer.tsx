@@ -4,15 +4,18 @@ import React, { useRef, useEffect, useState } from "react";
 function AudioPlayer() {
   const audioRef = useRef(null);
   const progressRef = useRef(null);
-  var [title, setTitle] = useState("test");
-  var [thumbnail, setThumbnail] = useState("");
+  var [title, setTitle] = useState("");
+  var [_thumbnail, setThumbnail] = useState("");
+  console.log(_thumbnail);
 
   useEffect(() => {
     const handleTrackChange = (event) => {
       console.log(event);
       const newTrack = event.detail.mp3_url;
+
         setTitle(event.detail.title);
         setThumbnail(event.detail.thumbnail);
+
       if (newTrack) {
         const audio = audioRef.current;
         audio.src = newTrack;
@@ -89,8 +92,8 @@ function AudioPlayer() {
           <i className="playerIcon fi fi-rr-stop-circle"></i>
         </button>
       </div>
-      <div className="flex gap-2">
-        <div><img src={thumbnail} alt={title} /></div>
+      <div className="flex gap-2 items-center">
+        <div><img src={_thumbnail} alt={title} className="w-10 h-10 border-2 rounded-lg border-white" /></div>
       <div className="text-white">{title}</div>
       </div>
       <div className="flex items-center">
@@ -115,7 +118,7 @@ function AudioPlayer() {
           </button>
         </div>
       </div>
-      <audio ref={audioRef} controls className="" />
+      <audio ref={audioRef} controls className="hidden" />
     </div>
   );
 }
