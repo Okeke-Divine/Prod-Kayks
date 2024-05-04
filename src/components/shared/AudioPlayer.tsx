@@ -7,7 +7,7 @@ function AudioPlayer() {
 
   useEffect(() => {
     const handleTrackChange = (event) => {
-      const newTrack = event.detail;
+      const newTrack = event.mp3_url;
       if (newTrack) {
         const audio = audioRef.current;
         audio.src = newTrack;

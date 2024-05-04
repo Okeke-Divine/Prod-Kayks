@@ -7,8 +7,8 @@ import Swal from "sweetalert2";
 const download_msg =
   "Purchase a license to use the beat in your music. Feel free to use this beat on TikTok or IG any other platform! Just be sure to tag/credit me (@prod.kayks)";
 
-  const playBeat = (trackUrl) => {
-    window.dispatchEvent(new CustomEvent('trackChange', { detail: trackUrl }));
+  const playBeat = (mp3_url,title,thumbnail) => {
+    window.dispatchEvent(new CustomEvent('trackChange', { mp3_url: mp3_url, title: title, thumbnail: thumbnail }));
   };
 
 async function downloadFile(url, filename) {
@@ -61,7 +61,7 @@ export default function BeatCard({
           <div className="absolute inset-0 bg-black opacity-60"></div>{" "}
           {/* Overlay */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <button className="text-white text-3xl" onClick={() => playBeat(mp3_url)}>
+            <button className="text-white text-3xl" onClick={() => playBeat(mp3_url,title,thumbnail)}>
               <i className="fi fi-tr-play-circle opacity-50 group-hover:opacity-100 duration-300 text-6xl"></i>
             </button>
           </div>
