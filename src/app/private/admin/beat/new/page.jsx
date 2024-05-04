@@ -19,42 +19,42 @@ export default async function NewBeat() {
 
     if (uname !== username || password !== pswd) {
       return;
-    }
-
-    const name = data.get("name");
-    const genreId = data.get("genreId");
-    const code = parseInt(data.get("code"));
-    const desc = data.get("desc");
-    const tags = data.get("tags");
-    const bpm = parseInt(data.get("bpm"));
-    const key = data.get("key");
-    const price = parseInt(data.get("price"));
-    const thumbnail = data.get("thumbnail");
-    const mp3 = data.get("mp3");
-    const sold = data.get("sold");
-
-    if (
-      typeof name !== "string" ||
-      name.length === 0 ||
-      typeof genreId !== "string" ||
-      genreId.length === 0 ||
-      code.length === 0
-    ) {
-      return;
     } else {
-      await prisma.beat.create({
-        data: {
-          genreId,
-          name,
-          desc,
-          code,
-          tags,
-          bpm,
-          key,
-          price,
-        },
-      });
-      redirect("/private/admin/beat");
+      const name = data.get("name");
+      const genreId = data.get("genreId");
+      const code = parseInt(data.get("code"));
+      const desc = data.get("desc");
+      const tags = data.get("tags");
+      const bpm = parseInt(data.get("bpm"));
+      const key = data.get("key");
+      const price = parseInt(data.get("price"));
+      const thumbnail = data.get("thumbnail");
+      const mp3 = data.get("mp3");
+      const sold = data.get("sold");
+
+      if (
+        typeof name !== "string" ||
+        name.length === 0 ||
+        typeof genreId !== "string" ||
+        genreId.length === 0 ||
+        code.length === 0
+      ) {
+        return;
+      } else {
+        await prisma.beat.create({
+          data: {
+            genreId,
+            name,
+            desc,
+            code,
+            tags,
+            bpm,
+            key,
+            price,
+          },
+        });
+        redirect("/private/admin/beat");
+      }
     }
   }
 
