@@ -88,7 +88,7 @@ export default async function NewBeat() {
           </div>
           <div>
             <div className="adminInputContainer">
-              <label className="adminInputLabel">Name</label>
+              <label className="adminInputLabel">Name*</label>
               <input
                 type="text"
                 name="name"
@@ -98,7 +98,7 @@ export default async function NewBeat() {
               />
             </div>
             <div className="adminInputContainer">
-              <label className="adminInputLabel">Select a Genre</label>
+              <label className="adminInputLabel">Select a Genre*</label>
               <select
                 name="genreId"
                 className="adminInput text-gray-400"
@@ -115,7 +115,7 @@ export default async function NewBeat() {
               </select>
             </div>
             <div className="adminInputContainer">
-              <label className="adminInputLabel">Code</label>
+              <label className="adminInputLabel">Code*</label>
               <input
                 type="number"
                 name="code"
@@ -125,12 +125,13 @@ export default async function NewBeat() {
               />
             </div>
             <div className="adminInputContainer">
-              <label className="adminInputLabel">Description</label>
+              <label className="adminInputLabel">Description*</label>
               <input
                 type="text"
                 name="desc"
                 placeholder="Description"
                 className="adminInput"
+                required
               />
             </div>
             <div className="adminInputContainer">
@@ -173,7 +174,7 @@ export default async function NewBeat() {
             <div className="adminInputContainer">
               <label className="adminInputLabel">Thumbnail</label>
               <input
-                type="file"
+                type="text"
                 name="thumbnail"
                 className="adminInput text-white"
                 accept="image/*"
@@ -182,8 +183,8 @@ export default async function NewBeat() {
             <div className="adminInputContainer">
               <label className="adminInputLabel">Mp3</label>
               <input
-                type="file"
-                name="mp3"
+                type="text"
+                name="mp3_url"
                 className="adminInput text-white"
                 accept="audio/mp3"
               />
@@ -197,6 +198,15 @@ export default async function NewBeat() {
               defaultChecked={false}
             />
             <label className="adminInputLabel">Sold</label>
+          </div>
+          <div className="adminInputContainer">
+            <input
+              type="checkbox"
+              name="free_download"
+              className="mr-2"
+              defaultChecked={false}
+            />
+            <label className="adminInputLabel">Free Download</label>
           </div>
           <button className="bg-pink py-2 px-5 rounded mt-1">Submit</button>
         </form>

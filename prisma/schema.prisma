@@ -31,6 +31,8 @@ model Beat {
   song      String?
   contract  String?
   free_download Boolean?
+  fall_back_thumbnail String?
+  fall_back_mp3_url String?
 
   @@unique([genreId, name])
   @@index([name])
