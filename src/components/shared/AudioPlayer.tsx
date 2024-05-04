@@ -4,27 +4,31 @@ import React, { useRef, useEffect, useState } from "react";
 function AudioPlayer() {
   const audioRef = useRef(null);
   const progressRef = useRef(null);
-  var [title, setTitle] = useState("");
-  var [_thumbnail, setThumbnail] = useState("");
-  console.log(_thumbnail);
+  
+  const [title, setTitle] = useState("");
+  const [_thumbnail, setThumbnail] = useState("");
+  
+    const [isPlaying,setIsplaying] = useState(false);
 
   useEffect(() => {
     const handleTrackChange = (event) => {
-      console.log(event);
       const newTrack = event.detail.mp3_url;
 
-        setTitle(event.detail.title);
-        setThumbnail(event.detail.thumbnail);
+      setTitle(event.detail.title);
+      setThumbnail(event.detail.thumbnail);
 
       if (newTrack) {
         const audio = audioRef.current;
         audio.src = newTrack;
         audio.load();
-        audio.play(); // Start playing the track
+        // Start playing the track
+        audio.play(); 
+        setIsplaying(true); 
         localStorage.setItem("current_beat", newTrack);
       } else {
         const audio = audioRef.current;
         audio.pause(); // Pause if no track is set
+        setIsplaying(false); 
         localStorage.removeItem("current_beat");
       }
     };
@@ -72,31 +76,47 @@ function AudioPlayer() {
   };
 
   return (
-    <div className="fixed bottom-0 left-0 w-full h-16 bg-[rgb(13,3,20)] border-t-2 border-wood py-5 flex items-center justify-between px-4 z-40">
-      <div className="flex gap-2">
-        <button onClick={togglePlay} className="text-white hover:text-gray-400">
-          {audioRef.current?.paused ? (
-            <>
-              <i className="playerIcon fi fi-tr-play-pause"></i>
-            </>
-          ) : (
-            <>
-              <i className="playerIcon fi fi-tr-play-pause"></i>
-            </>
-          )}
-        </button>
-        <button
-          onClick={stopPlayback}
-          className="text-white hover:text-gray-400 mr-2"
-        >
-          <i className="playerIcon fi fi-rr-stop-circle"></i>
-        </button>
+    <div className="fixed bottom-0 left-0 w-full h-16 bg-[rgb(13,3,20)] border-t-2 border-wood py-5 flex items-center justify-between px-4 z-40 duration">
+      <div className="flex gap-5">
+        <div className="flex gap-2 w-fit">
+          <button
+            onClick={togglePlay}
+            className="text-white hover:text-gray-400"
+          >
+            {audioRef.current?.paused ? (
+              <>
+                <i className="playerIcon fi fi-tr-play-pause"></i>
+              </>
+            ) : (
+              <>
+                <i className="playerIcon fi fi-tr-play-pause"></i>
+              </>
+            )}
+          </button>
+          <button
+            onClick={stopPlayback}
+            className="text-white hover:text-gray-400 mr-2"
+          >
+            <i className="playerIcon fi fi-rr-stop-circle"></i>
+          </button>
+        </div>
+        <div className="flex gap-2 items-center w-ful">
+          <div>
+            {_thumbnail ? (
+                <>
+                <img
+              src={_thumbnail}
+              alt={title}
+              className="w-10 h-10 border-2 rounded-lg border-white"
+            /></>
+            ): (<div />)}
+          </div>
+          <div className="text-white max-w-full bg">
+            <marquee>{title}</marquee>
+          </div>
+        </div>
       </div>
-      <div className="flex gap-2 items-center">
-        <div><img src={_thumbnail} alt={title} className="w-10 h-10 border-2 rounded-lg border-white" /></div>
-      <div className="text-white">{title}</div>
-      </div>
-      <div className="flex items-center">
+      <div className="flex items-center w-fit">
         <div className="w-full bg-gray-200 rounded-full h-2">
           <div
             ref={progressRef}
