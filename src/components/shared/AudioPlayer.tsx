@@ -1,13 +1,18 @@
 "use client";
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 
 function AudioPlayer() {
   const audioRef = useRef(null);
   const progressRef = useRef(null);
+  var [title, setTitle] = useState("test");
+  var [thumbnail, setThumbnail] = useState("");
 
   useEffect(() => {
     const handleTrackChange = (event) => {
-      const newTrack = event.mp3_url;
+      console.log(event);
+      const newTrack = event.detail.mp3_url;
+        setTitle(event.detail.title);
+        setThumbnail(event.detail.thumbnail);
       if (newTrack) {
         const audio = audioRef.current;
         audio.src = newTrack;
@@ -84,6 +89,10 @@ function AudioPlayer() {
           <i className="playerIcon fi fi-rr-stop-circle"></i>
         </button>
       </div>
+      <div className="flex gap-2">
+        <div><img src={thumbnail} alt={title} /></div>
+      <div className="text-white">{title}</div>
+      </div>
       <div className="flex items-center">
         <div className="w-full bg-gray-200 rounded-full h-2">
           <div
@@ -106,7 +115,7 @@ function AudioPlayer() {
           </button>
         </div>
       </div>
-      <audio ref={audioRef} controls className="hidden" />
+      <audio ref={audioRef} controls className="" />
     </div>
   );
 }

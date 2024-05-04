@@ -8,7 +8,7 @@ const download_msg =
   "Purchase a license to use the beat in your music. Feel free to use this beat on TikTok or IG any other platform! Just be sure to tag/credit me (@prod.kayks)";
 
   const playBeat = (mp3_url,title,thumbnail) => {
-    window.dispatchEvent(new CustomEvent('trackChange', { mp3_url: mp3_url, title: title, thumbnail: thumbnail }));
+    window.dispatchEvent(new CustomEvent('trackChange', { detail:{mp3_url,title,thumbnail}}));
   };
 
 async function downloadFile(url, filename) {
