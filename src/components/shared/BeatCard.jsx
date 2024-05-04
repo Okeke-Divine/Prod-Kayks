@@ -2,6 +2,7 @@ import CTag from "../shared/CTag";
 import Seperator from "../shared/Seperator";
 import Divider from "../shared/Divider";
 
+
 export default function BeatCard({
   title,
   desc,
@@ -10,6 +11,9 @@ export default function BeatCard({
   bpm,
   beatKey,
   price,
+  sold,
+  free_download,
+  mp3_url
 }) {
   // const images = ["/assets/images/covers/1.jpg", "/assets/images/covers/2.jpg"];
 
