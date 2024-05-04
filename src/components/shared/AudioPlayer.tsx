@@ -67,6 +67,7 @@ function AudioPlayer() {
     const audio = audioRef.current;
     audio.pause();
     audio.currentTime = 0; // Reset playback time
+    setIsplaying(false); 
   };
 
   const adjustVolume = (delta) => {
@@ -76,7 +77,7 @@ function AudioPlayer() {
   };
 
   return (
-    <div className="fixed bottom-0 left-0 w-full h-16 bg-[rgb(13,3,20)] border-t-2 border-wood py-5 flex items-center justify-between px-4 z-40 duration">
+    <div className={`fixed ${(isPlaying === true) ? 'bottom-0' : '-bottom-full'} left-0 w-full h-16 bg-[rgb(13,3,20)] border-t-2 border-wood py-5 flex items-center justify-between px-4 z-40 duration-300`}>
       <div className="flex gap-5">
         <div className="flex gap-2 w-fit">
           <button
@@ -119,8 +120,8 @@ function AudioPlayer() {
       <div className="flex items-center w-fit">
         <div className="w-full bg-gray-200 rounded-full h-2">
           <div
-            ref={progressRef}
-            className="h-full bg-green-500 rounded-full"
+            // ref={progressRef}
+            className="h-[1px] w-[20px] bg-green-500 rounded-full"
           ></div>
         </div>
         <div className="flex items-center ml-2">
