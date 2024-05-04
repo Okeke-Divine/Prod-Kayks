@@ -64,7 +64,6 @@ export default async function NewBeat() {
           },
         });
         console.log('>>> $`user.bin`/CREATED')
-        return;
         redirect("/private/admin/beat");
       }
     }
