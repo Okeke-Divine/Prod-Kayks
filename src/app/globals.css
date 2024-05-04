@@ -96,7 +96,7 @@
     @apply pb-3;
   }
   .playerIcon{
-    @apply text-xl text-[rgb(255,215,128)];
+    @apply text-2xl text-[rgb(255,215,128)] relative top-[5px];
   }
 }
 
