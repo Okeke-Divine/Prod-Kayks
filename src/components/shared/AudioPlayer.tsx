@@ -64,7 +64,7 @@ function AudioPlayer() {
   };
 
   return (
-    <div className="fixed bottom-0 left-0 w-full h-16 bg-[rgb(13,3,0)] border-t-2 border-wood py-5 flex items-center justify-between px-4 z-40">
+    <div className="fixed bottom-0 left-0 w-full h-16 bg-[rgb(13,3,20)] border-t-2 border-wood py-5 flex items-center justify-between px-4 z-40">
       <div className="flex gap-2">
         <button onClick={togglePlay} className="text-white hover:text-gray-400">
           {audioRef.current?.paused ? (
