@@ -36,6 +36,7 @@ export default function RootLayout({ children }) {
           <meta name="twitter:url" content="https://prodkayks.vercel.app/" />
           <meta name="twitter:creator" content="@okekedivine__" />
           <meta name="twitter:image" content="https://prodkayks.vercel.app/assets/images/og_image-1200x630.jpg" />
+          <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css' />
           </head>
           <body className={inter.className + ' ' + 'bg-purple-dark text-white '}>
             <Navbar />
