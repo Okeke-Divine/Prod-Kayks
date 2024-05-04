@@ -34,10 +34,8 @@ export default async function NewBeat() {
       var sold = data.get("sold");
       var free_download = data.get("free_download");
 
-      var sold = (sold === null) ? false : true;
-      var free_download = (free_download === null) ? false : true;
-
-      console.log(sold)
+      var _sold = (sold === null) ? false : true;
+      var _free_download = (free_download === null) ? false : true;
 
 
       if (
@@ -47,7 +45,6 @@ export default async function NewBeat() {
         genreId.length === 0 ||
         code.length === 0
       ) {
-        return;
       } else {
         console.log('>>> $`user.bin`/AWAIT')
         await prisma.beat.create({
@@ -60,10 +57,10 @@ export default async function NewBeat() {
             bpm,
             key,
             price,
-            // sold,
+            sold: _sold,
             thumbnail,
             mp3_url,
-            free_download,
+            free_download: _free_download,
           },
         });
         console.log('>>> $`user.bin`/CREATED')
@@ -210,7 +207,8 @@ export default async function NewBeat() {
               type="checkbox"
               name="sold"
               className="mr-2"
-              defaultChecked={false}
+              // checked={true}
+              defaultChecked={true}
             />
             <label className="adminInputLabel">Sold</label>
           </div>
