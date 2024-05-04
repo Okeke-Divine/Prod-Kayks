@@ -30,7 +30,7 @@ model Beat {
   artist    String?
   song      String?
   contract  String?
-  free_download Boolean??
+  free_download Boolean?
 
   @@unique([genreId, name])
   @@index([name])
