@@ -46,7 +46,6 @@ export default async function NewBeat() {
         code.length === 0
       ) {
       } else {
-        console.log('>>> $`user.bin`/AWAIT')
         await prisma.beat.create({
           data: {
             genreId,
@@ -63,7 +62,6 @@ export default async function NewBeat() {
             free_download: _free_download,
           },
         });
-        console.log('>>> $`user.bin`/CREATED')
         redirect("/private/admin/beat");
       }
     }

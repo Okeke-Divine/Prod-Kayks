@@ -5,6 +5,28 @@ import CTag from "../shared/CTag";
 import Seperator from "../shared/Seperator";
 import Divider from "../shared/Divider";
 
+const download_msg = "Purchase a license to use the beat in your music. Feel free to use this beat on TikTok or IG any other platform! Just be sure to tag/credit me (@prod.kayks). :)";
+
+async function downloadFile(url, filename) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const blob = await response.blob();
+    const fileUrl = window.URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = fileUrl;
+    link.setAttribute('download', filename);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  } catch (error) {
+    console.error('Download error:', error);
+  }
+
+}
+
 export default function BeatCard({
   title,
   desc,
@@ -63,11 +85,11 @@ export default function BeatCard({
             Buy
           </button>
           {free_download === true ? (
-            <Link href={mp3_url} target="_blank" download>
-              <button className="bg-purple-dark-2 text-white py-2 px-3 text-sm rounded-lg cursor-pointer">
+            // <Link href={mp3_url} target="_blank" download>
+              <button onClick={() => downloadFile(mp3_url, title+' - Prod. Kayks.mp3')} className="bg-purple-dark-2 text-white py-2 px-3 text-sm rounded-lg cursor-pointer">
                 Free Download
               </button>
-            </Link>
+            // </Link>
           ) : (
             <>
               <div></div>
