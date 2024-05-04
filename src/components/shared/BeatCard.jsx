@@ -1,3 +1,4 @@
+import Link from "next/link";
 import CTag from "../shared/CTag";
 import Seperator from "../shared/Seperator";
 import Divider from "../shared/Divider";
@@ -38,7 +39,7 @@ export default function BeatCard({
         <div>
           <CTag name={genre} />
         </div>
-        <div className="font-bold mt-1">{title}</div>
+        <div className="font-bold mt-1">{(sold === true) ? '[SOLD] ' : ''}{title}</div>
         <div className="text-gray-400 break-words text-wrap w-[250px]">
           {desc}
         </div>
@@ -60,11 +61,15 @@ export default function BeatCard({
             Buy
           </button>
           {free_download === true ? (
-            <button className="bg-purple-dark-2 text-white py-2 px-3 text-sm rounded-lg cursor-pointer">
-              Free Download
-            </button>
+            <Link href={mp3_url} target="_blank" download={true}>
+              <button className="bg-purple-dark-2 text-white py-2 px-3 text-sm rounded-lg cursor-pointer">
+                Free Download
+              </button>
+            </Link>
           ) : (
-            <><div></div></>
+            <>
+              <div></div>
+            </>
           )}
         </div>
       </div>
