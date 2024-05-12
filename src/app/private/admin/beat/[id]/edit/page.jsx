@@ -1,80 +1,81 @@
 import prisma from "../../../../../../db";
 import { redirect } from "next/navigation";
 
-async function updateBeat(data) {
-    "use server";
+// async function updateBeat(data) {
+//     "use server";
 
-    const username = process.env.ADMIN_USERNAME;
-    const password = process.env.ADMIN_PASSWORD;
+//     const username = process.env.ADMIN_USERNAME;
+//     const password = process.env.ADMIN_PASSWORD;
 
-    const uname = data.get("uname");
-    const pswd = data.get("pswd");
+//     const uname = data.get("uname");
+//     const pswd = data.get("pswd");
 
-    if (uname !== username || password !== pswd) {
-      return;
-    } 
+//     if (uname !== username || password !== pswd) {
+//       return;
+//     } 
 
-      const name = data.get("name");
-      const id = data.get("id");
-      const genreId = data.get("genreId");
-      const code = parseInt(data.get("code"));
-      const desc = data.get("desc");
-      const tags = data.get("tags");
-      const bpm = parseInt(data.get("bpm"));
-      const key = data.get("key");
-      const price = parseInt(data.get("price"));
-      const thumbnail = data.get("thumbnail");
-      const mp3_url = data.get("mp3_url");
+//       const name = data.get("name");
+//       const id = data.get("id");
+//       const genreId = data.get("genreId");
+//       const code = parseInt(data.get("code"));
+//       const desc = data.get("desc");
+//       const tags = data.get("tags");
+//       const bpm = parseInt(data.get("bpm"));
+//       const key = data.get("key");
+//       const price = parseInt(data.get("price"));
+//       const thumbnail = data.get("thumbnail");
+//       const mp3_url = data.get("mp3_url");
 
-      var sold = data.get("sold");
-      var free_download = data.get("free_download");
+//       var sold = data.get("sold");
+//       var free_download = data.get("free_download");
 
-      var _sold = (sold === null) ? false : true;
-      var _free_download = (free_download === null) ? false : true;
+//       var _sold = (sold === null) ? false : true;
+//       var _free_download = (free_download === null) ? false : true;
 
 
-      if (
-        typeof name !== "string" ||
-        name.length === 0 ||
-        typeof genreId !== "string" ||
-        genreId.length === 0 ||
-        code.length === 0
-      ) {
-      } else {
-        await prisma.beat.update({
-          data: {
-            genreId,
-            name,
-            desc,
-            code,
-            tags,
-            bpm,
-            key,
-            price,
-            sold: _sold,
-            thumbnail,
-            mp3_url,
-            free_download: _free_download,
-          },where:{id:id}
-        });
-        redirect("/private/admin/beat");
-      }
-  }
+//       if (
+//         typeof name !== "string" ||
+//         name.length === 0 ||
+//         typeof genreId !== "string" ||
+//         genreId.length === 0 ||
+//         code.length === 0
+//       ) {
+//       } else {
+//         await prisma.beat.update({
+//           data: {
+//             genreId,
+//             name,
+//             desc,
+//             code,
+//             tags,
+//             bpm,
+//             key,
+//             price,
+//             sold: _sold,
+//             thumbnail,
+//             mp3_url,
+//             free_download: _free_download,
+//           },where:{id:id}
+//         });
+//         redirect("/private/admin/beat");
+//       }
+//   }
 
 export default async function EditBeat({params}){
     const id = params.id;
-    const beat = prisma.beat.findUnique({where:{id:id,deleted:false}})
+    const beat = await prisma.beat.findUnique({where:{id:id,deleted:false}})
 
-    console.log(beat);
-    if(1=1){
+    if(!beat || beat === null || beat === undefined){
         return (
             <>
-            <div className="text-4xl font-bold">This beat does not exist</div>
+            <div className="text-4xl font-bold mt-10">This beat does not exist</div>
             </>
         )
     }
 
-    console.log(id);
+    const genres = await prisma.genre.findMany()
+
+    console.log(beat);
     return (
         <>
            <div className="mainLayout">
@@ -110,6 +111,7 @@ export default async function EditBeat({params}){
                 placeholder="Name"
                 className="adminInput"
                 required
+                defaultValue={beat.name}
               />
             </div>
             <div className="adminInputContainer">
@@ -123,7 +125,7 @@ export default async function EditBeat({params}){
                   Select a Genre
                 </option>
                 {genres.map((genre, index) => (
-                  <option className="text-black" key={index} value={genre.id}>
+                  <option selected={beat.genreId === genre.id} className="text-black" key={index} value={genre.id}>
                     {genre.name}
                   </option>
                 ))}
@@ -137,6 +139,7 @@ export default async function EditBeat({params}){
                 placeholder="Code"
                 className="adminInput"
                 required
+                defaultValue={beat.code}
               />
             </div>
             <div className="adminInputContainer">
@@ -147,6 +150,7 @@ export default async function EditBeat({params}){
                 placeholder="Description"
                 className="adminInput"
                 required
+                defaultValue={beat.desc}
               />
             </div>
             <div className="adminInputContainer">
@@ -156,6 +160,7 @@ export default async function EditBeat({params}){
                 name="tags"
                 placeholder="Tags (seperated by comma)"
                 className="adminInput"
+                defaultValue={beat.tags}
               />
             </div>
             <div className="adminInputContainer">
@@ -165,6 +170,7 @@ export default async function EditBeat({params}){
                 name="bpm"
                 placeholder="BPM"
                 className="adminInput"
+                defaultValue={beat.bpm}
               />
             </div>
             <div className="adminInputContainer">
@@ -174,6 +180,7 @@ export default async function EditBeat({params}){
                 name="key"
                 placeholder="Key"
                 className="adminInput"
+                defaultValue={beat.key}
               />
             </div>
             <div className="adminInputContainer">
@@ -182,7 +189,7 @@ export default async function EditBeat({params}){
                 type="number"
                 name="price"
                 placeholder="Price (USD) $"
-                defaultValue={20}
+                defaultValue={beat.price}
                 className="adminInput"
               />
             </div>
@@ -193,6 +200,7 @@ export default async function EditBeat({params}){
                 name="thumbnail"
                 className="adminInput"
                 accept="image/*"
+                defaultValue={beat.thumbnail}
               />
             </div>
             <div className="adminInputContainer">
@@ -202,6 +210,7 @@ export default async function EditBeat({params}){
                 name="mp3_url"
                 className="adminInput"
                 accept="audio/mp3"
+                defaultValue={beat.mp3_url}
               />
             </div>
           </div>
@@ -211,7 +220,7 @@ export default async function EditBeat({params}){
               name="sold"
               className="mr-2"
               // checked={true}
-              defaultChecked={true}
+              defaultChecked={beat.sold}
             />
             <label className="adminInputLabel">Sold</label>
           </div>
@@ -220,11 +229,11 @@ export default async function EditBeat({params}){
               type="checkbox"
               name="free_download"
               className="mr-2"
-              defaultChecked={false}
+              defaultChecked={beat.free_download}
             />
             <label className="adminInputLabel">Free Download</label>
           </div>
-          <button className="bg-pink py-2 px-5 rounded mt-1">Submit</button>
+          <button className="bg-pink py-2 px-5 rounded mt-1">Edit</button>
         </form>
       </div>
         </>
