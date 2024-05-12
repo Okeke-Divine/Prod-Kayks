@@ -1,6 +1,5 @@
 import prisma from "../../../db";
-
-export const dynamic = "force-dynamic";
+import BeatView from "../../../components/beat/BeatView"
 
 export default async function BeatById({ params }) {
   const beat_id = params.id;
@@ -18,9 +17,7 @@ export default async function BeatById({ params }) {
 
   return (
     <>
-      <div className="mainLayout">
-        <div>Beat Details</div>
-      </div>
+     <BeatView beat={beat} />
     </>
   );
 }
