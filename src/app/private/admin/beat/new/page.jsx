@@ -205,7 +205,7 @@ export default async function NewBeat() {
               name="sold"
               className="mr-2"
               // checked={true}
-              defaultChecked={true}
+              defaultChecked={false}
             />
             <label className="adminInputLabel">Sold</label>
           </div>
@@ -214,7 +214,7 @@ export default async function NewBeat() {
               type="checkbox"
               name="free_download"
               className="mr-2"
-              defaultChecked={false}
+              defaultChecked={true}
             />
             <label className="adminInputLabel">Free Download</label>
           </div>
