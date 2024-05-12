@@ -12,7 +12,7 @@ import Divider from "../shared/Divider";
 
 export default function Hero() {
   const socials = [
-    { name: "Email", url: EMAIL_URL, iconClass: "fi fi-brands-facebook" },
+    { name: "Email", url: EMAIL_URL, iconClass: "fi fi-rr-envelope" },
     { name: "Tiktok", url: TIKTOK_URL, iconClass: "fi fi-brands-tik-tok" },
     {
       name: "Instagram",
@@ -21,7 +21,7 @@ export default function Hero() {
     },
     { name: "Youtube", url: YOUTUBE_URL, iconClass: "fi fi-brands-youtube" },
     { name: "Twitter", url: TWITTER_URL, iconClass: "fi fi-brands-twitter" },
-    { name: "Facebook", url: FACEBOOK_URL, iconClass: "fi fi-brands-facebook" },
+    // { name: "Facebook", url: FACEBOOK_URL, iconClass: "fi fi-brands-facebook" },
   ];
 
   return (
