@@ -105,7 +105,7 @@ export default function BeatCard({
         <div className="py-2">
           <Divider />
         </div>
-        <div className="flex flex-wrap gap-2 py-2 justify-center">
+        <div className="flex flex-wrap gap-2 py-2 justify-center items-center">
           {sold === true ? (
             <></>
           ) : (
@@ -135,7 +135,7 @@ export default function BeatCard({
               <div></div>
             </>
           )}
-          <Link href={window.location.href+"beat/"+beatId}>L</Link>
+          <Link href={window.location.protocol+"//"+window.location.host+"/beat/"+beatId} className="">L</Link>
         </div>
       </div>
     </>

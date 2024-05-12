@@ -9,7 +9,7 @@ export default async function BeatById({ params }) {
   if (!beat || beat === null || beat === undefined) {
     return (
       <>
-        <div>
+        <div className="mainLayout">
           <div className="text-4xl font-bold">404 not found.</div>
         </div>
       </>
@@ -18,7 +18,7 @@ export default async function BeatById({ params }) {
 
   return (
     <>
-      <div>
+      <div className="mainLayout">
         <div>Beat Details</div>
       </div>
     </>
