@@ -7,8 +7,10 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title:
-    "Prod. Kayks | Music Producer | Get industry-ready instrumentals to fuel your next track.",
+  title: {
+    default:  "Prod. Kayks | Music Producer | Get industry-ready instrumentals to fuel your next track.",
+    template: "%s | Prod. Kayks",
+  },
   description: "Get industry-ready instrumentals to fuel your next track.",
 };
 
@@ -16,6 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+      <meta name="google-site-verification" content="O0THdygIatXpt8qvo529w2W-K7ptf3MkSQtjGcJgLA8" />
         <link
           rel="stylesheet"
           href="https://cdn-uicons.flaticon.com/2.3.0/uicons-thin-straight/css/uicons-thin-straight.css"
@@ -42,7 +45,7 @@ export default function RootLayout({ children }) {
           content="https://prodkayks.vercel.app/assets/images/og_image-1200x630.jpg"
         />
         {/* favicon */}
-        <link
+        <link 
           rel="shortcut icon"
           href="/assets/images/prodkayks.png"
           type="image/x-icon"
