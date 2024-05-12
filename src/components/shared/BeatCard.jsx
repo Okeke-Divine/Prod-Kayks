@@ -7,9 +7,18 @@ import Swal from "sweetalert2";
 const download_msg =
   "Purchase a license to use the beat in your music. Feel free to use this beat on TikTok or IG any other platform! Just be sure to tag/credit me (@prod.kayks)";
 
-  const playBeat = (mp3_url,title,thumbnail) => {
-    window.dispatchEvent(new CustomEvent('trackChange', { detail:{mp3_url,title,thumbnail}}));
-  };
+const playBeat = (mp3_url, title, thumbnail) => {
+  window.dispatchEvent(
+    new CustomEvent("trackChange", { detail: { mp3_url, title, thumbnail } })
+  );
+};
+
+function buyBeat(){
+  Swal.fire({
+    icon: "info",
+    text: "This feature isn't ready yet. To purchase this beat message me on WhatsApp (Discount Included)",
+  })
+}
 
 async function downloadFile(url, filename) {
   Swal.fire({
@@ -61,7 +70,10 @@ export default function BeatCard({
           <div className="absolute inset-0 bg-black opacity-60"></div>{" "}
           {/* Overlay */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <button className="text-white text-3xl" onClick={() => playBeat(mp3_url,title,thumbnail)}>
+            <button
+              className="text-white text-3xl"
+              onClick={() => playBeat(mp3_url, title, thumbnail)}
+            >
               <i className="fi fi-tr-play-circle opacity-50 group-hover:opacity-100 duration-300 text-6xl"></i>
             </button>
           </div>
@@ -92,13 +104,19 @@ export default function BeatCard({
           <Divider />
         </div>
         <div className="flex flex-wrap gap-2 py-2 justify-center">
-          <button className="bg-pink text-white py-2 px-3 text-sm rounded-lg cursor-pointer">
-            Buy
-          </button>
+          {sold === true ? (
+            <></>
+          ) : (
+            <>
+              <button onClick={buyBeat} className="bg-pink text-white py-2 px-3 text-sm rounded-lg cursor-pointer">
+                Buy
+              </button>
+            </>
+          )}
           {free_download === true ? (
             // <Link href={mp3_url} target="_blank" download>
             <button
-            title={download_msg}
+              title={download_msg}
               onClick={() =>
                 downloadFile(mp3_url, title + " - Prod. Kayks.mp3")
               }
