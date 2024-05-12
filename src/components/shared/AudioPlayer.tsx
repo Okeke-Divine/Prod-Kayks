@@ -122,7 +122,7 @@ function AudioPlayer() {
           <div
             // ref={progressRef}
             className="h-[1px] w-[20px] bg-green-500 rounded-full"
-          ></div>
+          >.</div>
         </div>
         <div className="flex items-center ml-2">
           <button
@@ -145,3 +145,4 @@ function AudioPlayer() {
 }
 
 export default AudioPlayer;
+  
