@@ -14,26 +14,26 @@ model email_list {
 }
 
 model Beat {
-  id        String   @id @default(uuid())
-  genre     Genre?   @relation(fields: [genreId], references: [id])
-  genreId   String
-  name      String
-  desc      String?
-  thumbnail String?
-  sold      Boolean? @default(false)
-  code      Int      @unique
-  tags      String?
-  bpm       Int?
-  key       String?
-  price     Int?
-  mp3_url   String?
-  artist    String?
-  song      String?
-  contract  String?
-  free_download Boolean? @default(true)
+  id                  String   @id @default(uuid())
+  genre               Genre?   @relation(fields: [genreId], references: [id])
+  genreId             String
+  name                String
+  desc                String?
+  thumbnail           String?  @db.LongText()
+  sold                Boolean? @default(false)
+  code                Int      @unique
+  tags                String?
+  bpm                 Int?
+  key                 String?
+  price               Int?
+  mp3_url             String?  @db.LongText()
+  artist              String?
+  song                String?
+  contract            String?
+  free_download       Boolean? @default(true)
   fall_back_thumbnail String?
-  fall_back_mp3_url String?
-  deleted Boolean? @default(false)
+  fall_back_mp3_url   String?
+  deleted             Boolean? @default(false)
 
   @@unique([genreId, name])
   @@index([name])

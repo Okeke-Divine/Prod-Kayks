@@ -75,7 +75,7 @@ export default function BeatCard({
           {sold === true ? "[SOLD] " : ""}
           {title}
         </div>
-        <div className="text-gray-400 break-words text-wrap w-[250px] break-words">
+        <div className="text-gray-400 break-words text-wrap w-[250px]">
           {desc}
         </div>
         <div className="py-2">
