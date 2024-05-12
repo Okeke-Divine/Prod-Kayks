@@ -71,9 +71,9 @@ export default function BeatCard({
         <div>
           <CTag name={genre} />
         </div>
-        <div className="font-bold mt-1 break-words">
+        <div className="font-bold mt-1 ">
           {sold === true ? "[SOLD] " : ""}
-          {title}
+          <div className="break-words text-wrap">{title}</div>
         </div>
         <div className="text-gray-400 break-words text-wrap w-[250px]">
           {desc}
