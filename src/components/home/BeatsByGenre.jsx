@@ -31,6 +31,7 @@ export default async function BeatsByGenre({ genre }) {
                 sold={beat.sold}
                 free_download={beat.free_download}
                 mp3_url={beat.mp3_url}
+                beatId={beat.id}
               />
             </div>
           ))}

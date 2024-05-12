@@ -3,6 +3,7 @@ import CTag from "../shared/CTag";
 import Seperator from "../shared/Seperator";
 import Divider from "../shared/Divider";
 import Swal from "sweetalert2";
+import Link from "next/link";
 
 const download_msg =
   "Purchase a license to use the beat in your music. Feel free to use this beat on TikTok or IG any other platform! Just be sure to tag/credit me (@prod.kayks)";
@@ -13,11 +14,11 @@ const playBeat = (mp3_url, title, thumbnail) => {
   );
 };
 
-function buyBeat(){
+function buyBeat() {
   Swal.fire({
     icon: "info",
     text: "This feature isn't ready yet. To purchase this beat message me on WhatsApp (Discount Included)",
-  })
+  });
 }
 
 async function downloadFile(url, filename) {
@@ -56,6 +57,7 @@ export default function BeatCard({
   sold,
   free_download,
   mp3_url,
+  beatId
 }) {
   return (
     <>
@@ -108,7 +110,10 @@ export default function BeatCard({
             <></>
           ) : (
             <>
-              <button onClick={buyBeat} className="bg-pink text-white py-2 px-3 text-sm rounded-lg cursor-pointer">
+              <button
+                onClick={buyBeat}
+                className="bg-pink text-white py-2 px-3 text-sm rounded-lg cursor-pointer"
+              >
                 Buy
               </button>
             </>
@@ -130,6 +135,7 @@ export default function BeatCard({
               <div></div>
             </>
           )}
+          <Link href={window.location.href+"beat/"+beatId}>L</Link>
         </div>
       </div>
     </>
