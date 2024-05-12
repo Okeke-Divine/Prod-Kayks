@@ -1,86 +1,112 @@
 import prisma from "../../../../../../db";
 import { redirect } from "next/navigation";
 
-// async function updateBeat(data) {
-//     "use server";
+async function updateBeat(data) {
+  "use server";
 
-//     const username = process.env.ADMIN_USERNAME;
-//     const password = process.env.ADMIN_PASSWORD;
+  const username = process.env.ADMIN_USERNAME;
+  const password = process.env.ADMIN_PASSWORD;
 
-//     const uname = data.get("uname");
-//     const pswd = data.get("pswd");
+  const uname = data.get("uname");
+  const pswd = data.get("pswd");
 
-//     if (uname !== username || password !== pswd) {
-//       return;
-//     } 
+  if (uname !== username || password !== pswd) {
+    return;
+  }
 
-//       const name = data.get("name");
-//       const id = data.get("id");
-//       const genreId = data.get("genreId");
-//       const code = parseInt(data.get("code"));
-//       const desc = data.get("desc");
-//       const tags = data.get("tags");
-//       const bpm = parseInt(data.get("bpm"));
-//       const key = data.get("key");
-//       const price = parseInt(data.get("price"));
-//       const thumbnail = data.get("thumbnail");
-//       const mp3_url = data.get("mp3_url");
+  const name = data.get("name");
+  const id = data.get("id");
+  const genreId = data.get("genreId");
+  const code = parseInt(data.get("code"));
+  const desc = data.get("desc");
+  const tags = data.get("tags");
+  const bpm = parseInt(data.get("bpm"));
+  const key = data.get("key");
+  const price = parseInt(data.get("price"));
+  const thumbnail = data.get("thumbnail");
+  const mp3_url = data.get("mp3_url");
 
-//       var sold = data.get("sold");
-//       var free_download = data.get("free_download");
+  var sold = data.get("sold");
+  var free_download = data.get("free_download");
 
-//       var _sold = (sold === null) ? false : true;
-//       var _free_download = (free_download === null) ? false : true;
+  var _sold = sold === null ? false : true;
+  var _free_download = free_download === null ? false : true;
 
+  console.log("picked");
+  console.log(
+    id,
+    name,
+    genreId,
+    code,
+    desc,
+    tags,
+    bpm,
+    key,
+    price,
+    thumbnail,
+    mp3_url,
+    _sold,
+    _free_download
+  );
+  return;
 
-//       if (
-//         typeof name !== "string" ||
-//         name.length === 0 ||
-//         typeof genreId !== "string" ||
-//         genreId.length === 0 ||
-//         code.length === 0
-//       ) {
-//       } else {
-//         await prisma.beat.update({
-//           data: {
-//             genreId,
-//             name,
-//             desc,
-//             code,
-//             tags,
-//             bpm,
-//             key,
-//             price,
-//             sold: _sold,
-//             thumbnail,
-//             mp3_url,
-//             free_download: _free_download,
-//           },where:{id:id}
-//         });
-//         redirect("/private/admin/beat");
-//       }
-//   }
+  if (
+    typeof name !== "string" ||
+    name.length === 0 ||
+    typeof genreId !== "string" ||
+    genreId.length === 0 ||
+    code.length === 0
+  ) {
+  } else {
+    await prisma.beat.update({
+      data: {
+        genreId,
+        name,
+        desc,
+        code,
+        tags,
+        bpm,
+        key,
+        price,
+        sold: _sold,
+        thumbnail,
+        mp3_url,
+        free_download: _free_download,
+      },
+      where: { id: id },
+    });
+    redirect("/private/admin/beat");
+  }
+}
 
-export default async function EditBeat({params}){
-    const id = params.id;
-    const beat = await prisma.beat.findUnique({where:{id:id,deleted:false}})
+export default async function EditBeat({ params }) {
+  const id = params.id;
+  const beat = await prisma.beat.findUnique({
+    where: { id: id, deleted: false },
+  });
 
-    if(!beat || beat === null || beat === undefined){
-        return (
-            <>
-            <div className="text-4xl font-bold mt-10">This beat does not exist</div>
-            </>
-        )
-    }
-
-    const genres = await prisma.genre.findMany()
-
-    console.log(beat);
+  if (!beat || beat === null || beat === undefined) {
     return (
-        <>
-           <div className="mainLayout">
+      <>
+        <div className="text-4xl font-bold mt-10">This beat does not exist</div>
+      </>
+    );
+  }
+
+  const genres = await prisma.genre.findMany();
+
+  return (
+    <>
+      <div className="mainLayout">
         <h1 className="text-2xl">Beat | Edit | {beat.name}</h1>
-        <form className="mt-5">
+        <form action={updateBeat} className="mt-5">
+          <input
+            name="id"
+            value={beat.id}
+            readOnly={true}
+            className="hidden -z-50 fixed -top-full -left-full"
+            hidden
+          />
           <div>
             <div className="adminInputContainer">
               <input
@@ -125,7 +151,12 @@ export default async function EditBeat({params}){
                   Select a Genre
                 </option>
                 {genres.map((genre, index) => (
-                  <option selected={beat.genreId === genre.id} className="text-black" key={index} value={genre.id}>
+                  <option
+                    selected={beat.genreId === genre.id}
+                    className="text-black"
+                    key={index}
+                    value={genre.id}
+                  >
                     {genre.name}
                   </option>
                 ))}
@@ -233,9 +264,9 @@ export default async function EditBeat({params}){
             />
             <label className="adminInputLabel">Free Download</label>
           </div>
-          <button className="bg-pink py-2 px-5 rounded mt-1">Edit</button>
+          <button className="bg-pink py-2 px-5 rounded mt-1">Sold</button>
         </form>
       </div>
-        </>
-    )
+    </>
+  );
 }
