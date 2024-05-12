@@ -2,7 +2,7 @@
 import React, { useRef, useEffect, useState } from "react";
 
 function AudioPlayer() {
-  const audioRef = useRef(null);
+  const audioRef:any = useRef(null);
 
   const [title, setTitle] = useState("");
   const [_thumbnail, setThumbnail] = useState("");
@@ -41,7 +41,7 @@ function AudioPlayer() {
 
     // Update progress bar on playback
     const updateProgress = () => {
-      const audio = audioRef.current;
+      const audio:any = audioRef.current;
       if (audio.readyState === 4) {
         // Check if audio is ready
         const progress = (audio.currentTime / audio.duration) * 100;
@@ -57,7 +57,7 @@ function AudioPlayer() {
   }, []);
 
   const togglePlay = () => {
-    const audio = audioRef.current;
+    const audio:any = audioRef.current;
     if (audio.paused) {
       audio.play();
     } else {
@@ -66,14 +66,14 @@ function AudioPlayer() {
   };
 
   const stopPlayback = () => {
-    const audio = audioRef.current;
+    const audio:any = audioRef.current;
     audio.pause();
     audio.currentTime = 0; // Reset playback time
     setIsplaying(false);
   };
 
-  const adjustVolume = (delta) => {
-    const audio = audioRef.current;
+  const adjustVolume = (delta:any) => {
+    const audio:any = audioRef.current;
     const newVolume = Math.min(Math.max(audio.volume + delta, 0), 1); // Clamp volume between 0 and 1
     audio.volume = newVolume;
   };
