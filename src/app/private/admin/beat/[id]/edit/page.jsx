@@ -32,24 +32,6 @@ async function updateBeat(data) {
   var _sold = sold === null ? false : true;
   var _free_download = free_download === null ? false : true;
 
-  console.log("picked");
-  console.log(
-    id,
-    name,
-    genreId,
-    code,
-    desc,
-    tags,
-    bpm,
-    key,
-    price,
-    thumbnail,
-    mp3_url,
-    _sold,
-    _free_download
-  );
-  return;
-
   if (
     typeof name !== "string" ||
     name.length === 0 ||
@@ -57,6 +39,7 @@ async function updateBeat(data) {
     genreId.length === 0 ||
     code.length === 0
   ) {
+    console.log("An error just occured on the edit beat page type validation");
   } else {
     await prisma.beat.update({
       data: {
@@ -264,7 +247,7 @@ export default async function EditBeat({ params }) {
             />
             <label className="adminInputLabel">Free Download</label>
           </div>
-          <button className="bg-pink py-2 px-5 rounded mt-1">Sold</button>
+          <button className="bg-pink py-2 px-5 rounded mt-1">Save</button>
         </form>
       </div>
     </>
