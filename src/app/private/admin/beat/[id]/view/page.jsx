@@ -8,7 +8,6 @@ async function getBeat(id) {
 export default async function ViewBeat({ params }) {
   const id = params.id;
   const beat = await getBeat(id);
-  console.log(beat);
   return (
     <>
       <div className="mainLayout">
