@@ -57,7 +57,7 @@ export default function BeatCard({
   sold,
   free_download,
   mp3_url,
-  beatId
+  beatId,
 }) {
   return (
     <>
@@ -135,7 +135,18 @@ export default function BeatCard({
               <div></div>
             </>
           )}
-          <Link href={window.location.protocol+"//"+window.location.host+"/beat/"+beatId} className="">L</Link>
+          <Link
+            href={
+              window.location.protocol +
+              "//" +
+              window.location.host +
+              "/beat/" +
+              beatId
+            }
+            className=""
+          >
+            <i className="fi fi-rr-link-alt"></i>
+          </Link>
         </div>
       </div>
     </>
