@@ -2,6 +2,7 @@ import Link from "next/link";
 import prisma from "../../../../db";
 import BeatTableItem from "../../../../components/admin/beat/BeatTableItem"
 
+export const dynamic = 'force-dynamic'
 
 async function getBeats() {
   return await prisma.beat.findMany();

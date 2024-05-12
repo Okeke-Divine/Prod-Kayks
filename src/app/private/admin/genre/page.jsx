@@ -3,6 +3,8 @@ import prisma from "../../../../db";
 import { redirect } from "next/navigation";
 import GenreTableItem from "../../../../components/admin/genre/GenreTableItem";
 
+export const dynamic = 'force-dynamic'
+
 async function getGenres() {
   return await prisma.genre.findMany({
     select: { name: true, id: true, thumbnail_url: true },
