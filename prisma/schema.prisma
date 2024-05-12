@@ -33,6 +33,7 @@ model Beat {
   free_download Boolean? @default(true)
   fall_back_thumbnail String?
   fall_back_mp3_url String?
+  deleted Boolean? @default(false)
 
   @@unique([genreId, name])
   @@index([name])

@@ -16,7 +16,7 @@ export default function Navbar() {
               <div className="text-xl font-bold flex gap-x-2"><span className="hidden md:block">Prod. </span>Kayks</div>
             </div>
           </Link>
-          <div className={`fixed md:static z-50 md:z-1 bg-purple-dark-2 md:bg-transparent w-full md:w-fit top-0 ${sidebarIsVisible ? 'left-0' : '-left-full'} p-5 md:p-0 block md:flex items-center gap-x-5`}>
+          <div className={`fixed md:static z-50 md:z-1 bg-purple-dark-2 md:bg-transparent w-full md:w-fit top-0 ${sidebarIsVisible ? 'left-0' : '-left-full'} p-5 md:p-0 block md:flex items-center gap-x-5 h-[100vh] max-h-[100vh] md:h-fit md:max-h-[100vh] overflow-auto`}>
             <div
               className="flex justify-end md:hidden cursor-pointer"
               onClick={() => setSidebarIsVisible(false)}
