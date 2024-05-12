@@ -2,7 +2,7 @@ import Link from "next/link";
 import Divider from "./Divider";
 
 // constants
-import {TWITTER_URL, TIKTOK_URL, INSTAGRAM_URL, YOUTUBE_URL, SPOTIFY_URL} from "../../constants/shared/socials"
+import {TWITTER_URL, TIKTOK_URL, INSTAGRAM_URL, YOUTUBE_URL, SPOTIFY_URL, WHATSAPP_URL} from "../../constants/shared/socials"
 
 export default function Footer() {
   const socials = [
@@ -13,6 +13,7 @@ export default function Footer() {
     // { name: "Facebook", url: FACEBOOK_URL },
     // { name: "Push.fm", url: "" },
     { name: "Spotify", url: SPOTIFY_URL },
+    {name:"Whatsapp", url: WHATSAPP_URL}
   ];
 
   const links = [
