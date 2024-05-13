@@ -30,6 +30,7 @@ export default async function Beats() {
                 <tr>
                   <th className="adminTableRow">S/N</th>
                   <th className="adminTableRow">Name</th>
+                  <th className="adminTableRow">Thumbnail</th>
                   <th className="adminTableRow">Bpm</th>
                   <th className="adminTableRow">Key</th>
                   <th className="adminTableRow">Price</th>

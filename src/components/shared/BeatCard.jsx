@@ -89,15 +89,19 @@ export default function BeatCard({
           {sold === true ? "[SOLD] " : ""}
           <div className="break-words text-wrap">{title}</div>
         </div>
-        <div className="text-gray-400 break-words text-wrap w-[250px]">
-          {desc}
-        </div>
+        <div className="text-gray-400 break-words text-wrap">{desc}</div>
         <div className="py-2">
           <Divider />
         </div>
         <div className="flex flex-wrap gap-2 text-gray-400 text-sm">
-          <div className="text-wood">${price}</div>
-          <Seperator />
+          {sold === true ? (
+            ""
+          ) : (
+            <>
+              <div className="text-wood">${price}</div>
+              <Seperator />
+            </>
+          )}
           <div>{bpm} BPM</div>
           <Seperator />
           <div>{beatKey}</div>
