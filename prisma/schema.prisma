@@ -51,3 +51,10 @@ model Genre {
   thumbnail_url String?
   beats         Beat[]
 }
+
+model Releases {
+  id        String @id @default(uuid())
+  name      String
+  thumbnail String
+  url       String @db.LongText
+}
